@@ -14,6 +14,12 @@ export function Cover() {
         className="absolute inset-0 pointer-events-none z-[1]"
         style={{ background: 'radial-gradient(ellipse 100% 100% at 50% 50%,transparent 40%,rgba(0,0,0,.7) 100%)' }}
       />
+      {/* hero background photo */}
+      <img
+        src="/img/cover-hero.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-20 pointer-events-none"
+      />
       {/* grid */}
       <div
         className="absolute inset-0 z-0"

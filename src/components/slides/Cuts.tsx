@@ -4,22 +4,10 @@ import { SlideShell, slideItem } from './_SlideShell'
 import { waLink } from '../../lib/utils'
 
 const FEATURED_CUTS = [
-  {
-    name: 'Picanha Angus',
-    img: 'https://images.unsplash.com/photo-1558030137-a56c1b004fa6?auto=format&fit=crop&w=400&h=520&q=80',
-  },
-  {
-    name: 'Baby Beef',
-    img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&h=520&q=80',
-  },
-  {
-    name: 'Cordeiro',
-    img: 'https://images.unsplash.com/photo-1599921841143-819d4a889fdb?auto=format&fit=crop&w=400&h=520&q=80',
-  },
-  {
-    name: 'Bife Ancho',
-    img: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=400&h=520&q=80',
-  },
+  { name: 'Picanha Angus', img: '/img/cuts-picanha.png' },
+  { name: 'Baby Beef',     img: '/img/cuts-babbeef.png' },
+  { name: 'Cordeiro',      img: '/img/cuts-cordeiro.png' },
+  { name: 'Bife Ancho',    img: '/img/cuts-bifeancho.png' },
 ]
 
 export function Cuts({ isActive }: { isActive: boolean }) {
@@ -69,7 +57,7 @@ export function Cuts({ isActive }: { isActive: boolean }) {
             <img
               src={cut.img}
               alt={cut.name}
-              className="absolute inset-0 w-full h-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover opacity-80 scale-[1.22] transition-transform duration-700 group-hover:scale-[1.3]"
               onError={e => (e.currentTarget.style.display = 'none')}
             />
             {/* Gradient overlay */}

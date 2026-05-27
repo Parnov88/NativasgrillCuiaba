@@ -4,21 +4,9 @@ import { SlideShell, slideItem } from './_SlideShell'
 import { waLink } from '../../lib/utils'
 
 const PHOTOS = [
-  {
-    url: 'https://images.unsplash.com/photo-1555396273-ef5702e7305a?auto=format&fit=crop&w=800&h=420&q=80',
-    alt: 'Fachada Nativas Grill',
-    span: 'col-span-2',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&h=240&q=80',
-    alt: 'Salão Nativas Grill',
-    span: '',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=400&h=240&q=80',
-    alt: 'Ambiente Nativas Grill',
-    span: '',
-  },
+  { url: '/img/sobrenos-salao.png',  alt: 'Salão Nativas Grill',    span: 'col-span-2' },
+  { url: '/img/sobrenos-mesa.png',   alt: 'Mesa Nativas Grill',     span: '' },
+  { url: '/img/sobrenos-grelha.png', alt: 'Parrilla Nativas Grill', span: '' },
 ]
 
 export function SobreNos({ isActive }: { isActive: boolean }) {
@@ -91,7 +79,7 @@ export function SobreNos({ isActive }: { isActive: boolean }) {
             <img
               src={PHOTOS[0].url}
               alt={PHOTOS[0].alt}
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover opacity-90 scale-[1.22]"
               onError={e => (e.currentTarget.style.display = 'none')}
             />
             <div
@@ -109,7 +97,7 @@ export function SobreNos({ isActive }: { isActive: boolean }) {
               <img
                 src={p.url}
                 alt={p.alt}
-                className="w-full h-full object-cover opacity-75"
+                className="w-full h-full object-cover opacity-85 scale-[1.22]"
                 onError={e => (e.currentTarget.style.display = 'none')}
               />
               <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,.2)' }} />

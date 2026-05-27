@@ -79,19 +79,22 @@ export function Gastronomy({ isActive }: { isActive: boolean }) {
           ))}
         </div>
 
-        {/* Description row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-auto">
+        {/* Photo row */}
+        <div className="grid grid-cols-2 gap-3 mt-auto" style={{ minHeight: 160 }}>
           {[
-            { label: 'Culinária japonesa', desc: 'Sushis, sashimis e temakis frescos diariamente' },
-            { label: 'Frutos do mar',      desc: 'Salmão norueguês, bacalhau e camarão selecionados' },
-            { label: 'Confeitaria fina',   desc: 'Sobremesas artesanais e chocolate importado' },
-          ].map(c => (
-            <div
-              key={c.label}
-              className="glass-card rounded-xl p-4 hover:bg-white/[.04] transition-all duration-300"
-            >
-              <div className="text-[.75rem] font-semibold text-white/70 mb-[4px]">{c.label}</div>
-              <div className="text-[.65rem] text-white/35 leading-[1.7]">{c.desc}</div>
+            { src: '/img/gastro-buffet.png', label: 'Buffet Gourmet · +60 itens' },
+            { src: '/img/gastro-sushi.png',  label: 'Culinária Japonesa · Ao vivo' },
+          ].map(p => (
+            <div key={p.src} className="relative rounded-2xl overflow-hidden group">
+              <img
+                src={p.src}
+                alt={p.label}
+                className="w-full h-full object-cover scale-[1.22] transition-transform duration-700 group-hover:scale-[1.3] opacity-90"
+              />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 60%)' }} />
+              <div className="absolute bottom-0 left-0 right-0 p-4 text-[.72rem] font-semibold text-white/80 tracking-[.04em]">
+                {p.label}
+              </div>
             </div>
           ))}
         </div>
