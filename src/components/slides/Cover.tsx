@@ -42,7 +42,7 @@ export function Cover() {
 
       <motion.div
         className="relative z-[2] flex-1 flex flex-col justify-between"
-        style={{ padding: '32px 48px 40px 52px' }}
+        style={{ padding: '32px 56px 40px 56px' }}
         initial="hidden"
         animate="show"
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}

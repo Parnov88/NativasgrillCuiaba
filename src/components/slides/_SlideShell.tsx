@@ -64,7 +64,7 @@ export function SlideShell({
       </div>
       {/* inner content */}
       <motion.div
-        className="flex-1 flex flex-col px-10 md:px-16 pt-20 pb-14 relative z-[2] w-full max-w-[1160px] mx-auto"
+        className="flex-1 flex flex-col px-8 md:px-14 pt-20 pb-14 relative z-[2] w-full"
         variants={container}
         initial="hidden"
         animate={isActive ? 'show' : 'hidden'}
