@@ -20,7 +20,7 @@ export function Cover() {
       <img
         src="/img/cover-hero.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-20 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-40 pointer-events-none"
       />
       {/* grid */}
       <div
