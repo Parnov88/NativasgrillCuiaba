@@ -66,9 +66,9 @@ export function Pricing({ isActive }: { isActive: boolean }) {
               <img
                 src={COMBO_IMGS[i]}
                 alt={c.name}
-                className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-50 group-hover:opacity-65 transition-opacity duration-500"
               />
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,.95) 0%, rgba(0,0,0,.5) 50%, rgba(0,0,0,.3) 100%)' }} />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.1) 100%)' }} />
               {c.featured && (
                 <div
                   className="absolute top-0 right-0 text-[7px] tracking-[.15em] font-semibold px-[9px] py-[4px] text-white z-[2]"
