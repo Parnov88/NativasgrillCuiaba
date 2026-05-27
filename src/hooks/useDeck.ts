@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 export function useDeck(slideCount: number) {
   const deckRef = useRef<HTMLDivElement>(null)
   const [current, setCurrent] = useState(0)
+  const currentRef = useRef(0)
 
   const goTo = useCallback((i: number) => {
     const deck = deckRef.current
@@ -11,6 +12,10 @@ export function useDeck(slideCount: number) {
     const target = slides[Math.max(0, Math.min(slideCount - 1, i))]
     target?.scrollIntoView({ behavior: 'smooth' })
   }, [slideCount])
+
+  useEffect(() => {
+    currentRef.current = current
+  }, [current])
 
   useEffect(() => {
     const deck = deckRef.current
@@ -28,8 +33,8 @@ export function useDeck(slideCount: number) {
     }
 
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); goTo(current + 1) }
-      if (e.key === 'ArrowUp'   || e.key === 'PageUp')   { e.preventDefault(); goTo(current - 1) }
+      if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); goTo(currentRef.current + 1) }
+      if (e.key === 'ArrowUp'   || e.key === 'PageUp')   { e.preventDefault(); goTo(currentRef.current - 1) }
     }
 
     deck.addEventListener('scroll', handleScroll, { passive: true })
@@ -38,7 +43,7 @@ export function useDeck(slideCount: number) {
       deck.removeEventListener('scroll', handleScroll)
       window.removeEventListener('keydown', handleKey)
     }
-  }, [current, goTo])
+  }, [goTo])
 
   return { deckRef, current, goTo }
 }

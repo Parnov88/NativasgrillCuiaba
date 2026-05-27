@@ -19,9 +19,32 @@ import { Contact } from './components/slides/Contact'
 
 const SLIDE_COUNT = 10
 
+function Deck() {
+  const { deckRef, current, goTo } = useDeck(SLIDE_COUNT)
+  return (
+    <>
+      <Toolbar onLogoClick={() => goTo(0)} />
+      <NavDots current={current} onDotClick={goTo} />
+      <ProgressBar current={current} />
+
+      <div id="deck" ref={deckRef}>
+        <Cover />
+        <About isActive={current === 1} />
+        <SobreNos isActive={current === 2} />
+        <Space isActive={current === 3} />
+        <Gastronomy isActive={current === 4} />
+        <Cuts isActive={current === 5} />
+        <Pricing isActive={current === 6} />
+        <Audience isActive={current === 7} />
+        <Partnerships isActive={current === 8} />
+        <Contact isActive={current === 9} />
+      </div>
+    </>
+  )
+}
+
 export default function App() {
   const [loading, setLoading] = useState(true)
-  const { deckRef, current, goTo } = useDeck(SLIDE_COUNT)
 
   return (
     <main className="relative bg-black h-screen w-screen overflow-hidden select-none">
@@ -29,26 +52,7 @@ export default function App() {
         {loading && <Loader key="loader" onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
-      {!loading && (
-        <>
-          <Toolbar onLogoClick={() => goTo(0)} />
-          <NavDots current={current} onDotClick={goTo} />
-          <ProgressBar current={current} />
-
-          <div id="deck" ref={deckRef}>
-            <Cover />
-            <About isActive={current === 1} />
-            <SobreNos isActive={current === 2} />
-            <Space isActive={current === 3} />
-            <Gastronomy isActive={current === 4} />
-            <Cuts isActive={current === 5} />
-            <Pricing isActive={current === 6} />
-            <Audience isActive={current === 7} />
-            <Partnerships isActive={current === 8} />
-            <Contact isActive={current === 9} />
-          </div>
-        </>
-      )}
+      {!loading && <Deck />}
     </main>
   )
 }
