@@ -4,6 +4,13 @@ import { SlideShell, slideItem } from './_SlideShell'
 import { PERIODS, COMBOS, type PeriodKey } from '../../data/pricing'
 import { fmt } from '../../lib/utils'
 
+const COMBO_IMGS = [
+  '/img/pricing-livre.png',
+  '/img/pricing-soft.png',
+  '/img/pricing-intermediario.png',
+  '/img/pricing-premium.png',
+]
+
 export function Pricing({ isActive }: { isActive: boolean }) {
   const [period, setPeriod] = useState<PeriodKey>('jantar')
   const p = PERIODS[period]
@@ -52,22 +59,29 @@ export function Pricing({ isActive }: { isActive: boolean }) {
           {COMBOS.map((c, i) => (
             <div
               key={c.name}
-              className="glass-card flex flex-col rounded-2xl transition-all duration-300 hover:-translate-y-[3px] relative overflow-hidden"
+              className="glass-card flex flex-col rounded-2xl transition-all duration-300 hover:-translate-y-[3px] relative overflow-hidden group"
               style={c.featured ? { background: 'rgba(137,170,204,.05)', borderColor: 'rgba(137,170,204,.12)' } : {}}
             >
+              {/* Background photo */}
+              <img
+                src={COMBO_IMGS[i]}
+                alt={c.name}
+                className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+              />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,.95) 0%, rgba(0,0,0,.5) 50%, rgba(0,0,0,.3) 100%)' }} />
               {c.featured && (
                 <div
-                  className="absolute top-0 right-0 text-[7px] tracking-[.15em] font-semibold px-[9px] py-[4px] text-white"
+                  className="absolute top-0 right-0 text-[7px] tracking-[.15em] font-semibold px-[9px] py-[4px] text-white z-[2]"
                   style={{ background: 'linear-gradient(90deg,rgba(137,170,204,.5),rgba(78,133,191,.5))' }}
                 >
                   MAIS PEDIDO
                 </div>
               )}
-              <div className="p-[18px] pb-[12px] border-b border-white/5 flex-1">
+              <div className="p-[18px] pb-[12px] border-b border-white/5 flex-1 relative z-[1]">
                 <div className="text-[.8rem] font-semibold text-white/80 mb-[5px]">{c.name}</div>
                 <div className="text-[.67rem] text-white/30 leading-[1.75] min-h-[48px]">{c.desc}</div>
               </div>
-              <div className="px-[16px] py-[12px] pb-[16px]">
+              <div className="px-[16px] py-[12px] pb-[16px] relative z-[1]">
                 <div className="text-[8px] tracking-[.2em] uppercase text-white/20 mb-[4px]">{p.label}</div>
                 <div
                   className="font-display italic text-[1.4rem] leading-[1]"

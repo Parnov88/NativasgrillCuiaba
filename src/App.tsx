@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Loader } from './components/Loader'
-import { Toolbar } from './components/Toolbar'
 import { NavDots } from './components/NavDots'
 import { ProgressBar } from './components/ProgressBar'
 import { useDeck } from './hooks/useDeck'
@@ -23,7 +22,6 @@ function Deck() {
   const { deckRef, current, goTo } = useDeck(SLIDE_COUNT)
   return (
     <>
-      <Toolbar onLogoClick={() => goTo(0)} />
       <NavDots current={current} onDotClick={goTo} />
       <ProgressBar current={current} />
 
