@@ -3,7 +3,7 @@ import { MessageCircle, MapPin, Phone, Instagram } from 'lucide-react'
 import { SlideShell, slideItem } from './_SlideShell'
 import { waLink } from '../../lib/utils'
 
-const WA_MSG = 'Olá! Vi o mídia kit da Nativas Grill e gostaria de solicitar uma proposta para meu evento.'
+const WA_MSG = 'Olá! Gostaria de solicitar uma proposta para meu evento na Nativas Grill Cuiabá.'
 
 export function Contact({ isActive }: { isActive: boolean }) {
   return (
@@ -105,7 +105,7 @@ export function Contact({ isActive }: { isActive: boolean }) {
               Cuiabá — Mato Grosso · Parcerias abertas
             </p>
             <div className="text-[9px] tracking-[.4em] uppercase text-white/18 mt-4">
-              Mídia Kit · 2026
+              Cuiabá · 2026
             </div>
           </div>
         </div>

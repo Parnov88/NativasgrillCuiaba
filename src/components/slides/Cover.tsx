@@ -65,7 +65,7 @@ export function Cover() {
           </div>
           <div className="flex items-center gap-2 text-[9px] tracking-[.4em] uppercase text-white/25">
             <div style={{ width: 16, height: 1, background: 'rgba(255,255,255,.15)' }} />
-            Mídia Kit · 2026
+            Apresentação Comercial · 2026
           </div>
         </motion.div>
 
@@ -106,9 +106,8 @@ export function Cover() {
             className="text-[.9rem] text-white/40 max-w-[440px] leading-[1.9] font-light"
             style={{ paddingLeft: 18, borderLeft: '1.5px solid rgba(255,255,255,.08)' }}
           >
-            Documento de apresentação comercial. Espaço privativo de alto padrão, gastronomia
-            premium e história de pioneirismo que consolidou a Nativas Grill como referência no
-            Centro-Oeste.
+            Espaço privativo premium · Gastronomia de alto padrão · Referência em eventos
+            e rodízio no Centro-Oeste desde 2018.
           </motion.p>
         </div>
 

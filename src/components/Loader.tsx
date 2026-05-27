@@ -44,7 +44,7 @@ export function Loader({ onComplete }: Props) {
       >
         <Monogram size={28} />
         <span className="text-[10px] tracking-[.4em] uppercase text-white/30">
-          Nativas Grill Cuiabá — Mídia Kit 2026
+          Nativas Grill · Cuiabá · 2026
         </span>
       </motion.div>
 
@@ -79,7 +79,7 @@ export function Loader({ onComplete }: Props) {
       >
         <div className="flex-1 pb-4">
           <p className="text-[10px] tracking-[.35em] uppercase text-white/25 mb-2">
-            Carregando apresentação
+            Apresentação Comercial
           </p>
           <div className="h-px overflow-hidden" style={{ background: 'rgba(255,255,255,.08)' }}>
             <div
