@@ -13,12 +13,12 @@ export function Partnerships({ isActive }: { isActive: boolean }) {
     >
       {/* Heading */}
       <motion.div variants={slideItem}>
-        <p className="flex items-center gap-[10px] text-[9px] tracking-[.5em] uppercase text-white/35 mb-[14px]">
+        <p className="flex items-center gap-[10px] uppercase text-white/35 mb-[12px]" style={{ fontSize: 10, letterSpacing: '0.45em' }}>
           <span style={{ width: 24, height: 1, background: 'linear-gradient(90deg,rgba(255,255,255,.4),transparent)' }} />
           Modelos de Colaboração
         </p>
         <h2
-          className="font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.05] tracking-[-0.02em] mb-[18px]"
+          className="font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.05] tracking-[-0.02em] mb-[16px]"
           style={{
             background: 'linear-gradient(180deg,#fff 30%,rgba(255,255,255,.7) 100%)',
             WebkitBackgroundClip: 'text',
@@ -40,17 +40,17 @@ export function Partnerships({ isActive }: { isActive: boolean }) {
             key={p.title}
             className="glass-card rounded-2xl p-6 hover:-translate-y-[3px] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden"
           >
-            {/* Number */}
+            {/* Ghost number */}
             <div
-              className="absolute top-4 right-5 font-display italic text-[2.5rem] leading-[1] select-none pointer-events-none"
-              style={{ color: 'rgba(255,255,255,.04)' }}
+              className="absolute top-4 right-5 font-display italic leading-[1] select-none pointer-events-none"
+              style={{ fontSize: 40, color: 'rgba(255,255,255,.04)' }}
             >
               {String(i + 1).padStart(2, '0')}
             </div>
 
-            <div>
-              <div className="text-[.85rem] font-semibold text-white/80 mb-2">{p.title}</div>
-              <div className="text-[.72rem] text-white/40 leading-[1.8]">{p.desc}</div>
+            <div className="flex flex-col gap-2">
+              <div className="font-semibold text-white/85" style={{ fontSize: 16 }}>{p.title}</div>
+              <div className="text-white/45 leading-[1.75]" style={{ fontSize: 13 }}>{p.desc}</div>
             </div>
 
             {/* Tags */}
@@ -58,11 +58,12 @@ export function Partnerships({ isActive }: { isActive: boolean }) {
               {p.tags.map(tag => (
                 <span
                   key={tag}
-                  className="text-[9px] tracking-[.1em] uppercase px-3 py-[4px] rounded-full"
+                  className="uppercase tracking-[.1em] px-3 py-[5px] rounded-full"
                   style={{
+                    fontSize: 10,
                     background: 'rgba(137,170,204,.08)',
-                    color: 'rgba(137,170,204,.7)',
-                    border: '1px solid rgba(137,170,204,.12)',
+                    color: 'rgba(137,170,204,.75)',
+                    border: '1px solid rgba(137,170,204,.14)',
                   }}
                 >
                   {tag}

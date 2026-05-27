@@ -13,12 +13,12 @@ export function Audience({ isActive }: { isActive: boolean }) {
     >
       {/* Heading */}
       <motion.div variants={slideItem}>
-        <p className="flex items-center gap-[10px] text-[9px] tracking-[.5em] uppercase text-white/35 mb-[14px]">
+        <p className="flex items-center gap-[10px] uppercase text-white/35 mb-[12px]" style={{ fontSize: 10, letterSpacing: '0.45em' }}>
           <span style={{ width: 24, height: 1, background: 'linear-gradient(90deg,rgba(255,255,255,.4),transparent)' }} />
           Perfil de Audiência
         </p>
         <h2
-          className="font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.05] tracking-[-0.02em] mb-[18px]"
+          className="font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.05] tracking-[-0.02em] mb-[16px]"
           style={{
             background: 'linear-gradient(180deg,#fff 30%,rgba(255,255,255,.7) 100%)',
             WebkitBackgroundClip: 'text',
@@ -32,20 +32,21 @@ export function Audience({ isActive }: { isActive: boolean }) {
 
       <motion.div
         variants={slideItem}
-        className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-10 flex-1 items-start mt-2"
+        className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-10 flex-1 items-stretch mt-1"
       >
         {/* Left: Demographics */}
         <div className="flex flex-col gap-2">
-          <div className="text-[9px] tracking-[.35em] uppercase text-white/20 mb-3">
+          <div className="uppercase text-white/25 mb-3 tracking-[.35em]" style={{ fontSize: 10 }}>
             Perfil do público
           </div>
           {DEMOGRAPHICS.map((d, i) => (
-            <div key={d.label} className="flex flex-col gap-[6px] mb-3">
+            <div key={d.label} className="flex flex-col gap-[7px] mb-4">
               <div className="flex items-center justify-between">
-                <span className="text-[.75rem] text-white/55">{d.label}</span>
+                <span className="text-white/60" style={{ fontSize: 14 }}>{d.label}</span>
                 <span
-                  className="font-display italic text-[1.1rem] leading-[1]"
+                  className="font-display italic leading-[1]"
                   style={{
+                    fontSize: 20,
                     background: 'linear-gradient(90deg,#89AACC,#4E85BF)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -68,18 +69,17 @@ export function Audience({ isActive }: { isActive: boolean }) {
           ))}
 
           {/* Summary card */}
-          <div className="glass-card rounded-2xl p-5 mt-2">
-            <p
-              className="font-display italic text-[.95rem] text-white/60 leading-[1.7]"
-            >
-              "Público premium com alto poder de compra, fiel à experiência e influente nas redes sociais."
+          <div className="glass-card rounded-2xl p-5 mt-auto">
+            <p className="font-display italic text-white/60 leading-[1.7]" style={{ fontSize: 15 }}>
+              "Público premium com alto poder de compra, fiel à experiência
+              e influente nas redes sociais."
             </p>
           </div>
         </div>
 
         {/* Right: Occasions */}
         <div className="flex flex-col gap-3">
-          <div className="text-[9px] tracking-[.35em] uppercase text-white/20 mb-1">
+          <div className="uppercase text-white/25 mb-1 tracking-[.35em]" style={{ fontSize: 10 }}>
             Ocasiões &amp; eventos
           </div>
           {OCCASIONS.map(o => (
@@ -88,12 +88,12 @@ export function Audience({ isActive }: { isActive: boolean }) {
               className="glass-card rounded-xl px-5 py-4 hover:bg-white/[.04] transition-all duration-300 flex items-center gap-4"
             >
               <div
-                className="w-[6px] h-[6px] rounded-full flex-shrink-0"
+                className="w-[7px] h-[7px] rounded-full flex-shrink-0"
                 style={{ background: 'linear-gradient(135deg,#89AACC,#4E85BF)' }}
               />
               <div>
-                <div className="text-[.78rem] font-semibold text-white/70 mb-[2px]">{o.title}</div>
-                <div className="text-[.65rem] text-white/35">{o.desc}</div>
+                <div className="font-semibold text-white/75 mb-[3px]" style={{ fontSize: 14 }}>{o.title}</div>
+                <div className="text-white/40" style={{ fontSize: 12 }}>{o.desc}</div>
               </div>
             </div>
           ))}

@@ -50,8 +50,8 @@ export function SlideShell({
           ...parsePosStyle(ambPos),
         }}
       />
-      {/* slide tag */}
-      <div className="absolute top-7 right-10 z-[2] flex items-center gap-2 text-[9px] tracking-[.5em] uppercase text-white/25">
+      {/* slide tag — top-right, readable size */}
+      <div className="absolute top-7 right-10 z-[2] flex items-center gap-2 tracking-[.45em] uppercase" style={{ fontSize: 10, color: 'rgba(255,255,255,.3)' }}>
         <div style={{ width: 20, height: 1, background: 'rgba(255,255,255,.15)' }} />
         {tag}
       </div>
@@ -64,7 +64,7 @@ export function SlideShell({
       </div>
       {/* inner content */}
       <motion.div
-        className="flex-1 flex flex-col px-8 md:px-14 pt-20 pb-14 relative z-[2] w-full"
+        className="flex-1 flex flex-col px-8 md:px-14 pt-16 pb-12 relative z-[2] w-full"
         variants={container}
         initial="hidden"
         animate={isActive ? 'show' : 'hidden'}

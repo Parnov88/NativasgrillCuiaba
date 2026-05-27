@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
-import { Monogram } from '../Loader'
 import { waLink } from '../../lib/utils'
 
 const fade = {
@@ -56,14 +55,8 @@ export function Cover() {
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
       >
         {/* Top row */}
-        <motion.div variants={fade} className="flex items-center justify-between">
-          <div className="flex items-center gap-[10px]">
-            <Monogram size={32} />
-            <span className="text-[11px] tracking-[.25em] uppercase text-white/40 font-normal">
-              Nativas Grill
-            </span>
-          </div>
-          <div className="flex items-center gap-2 text-[9px] tracking-[.4em] uppercase text-white/25">
+        <motion.div variants={fade} className="flex items-center justify-end">
+          <div className="flex items-center gap-2 uppercase text-white/25 tracking-[.4em]" style={{ fontSize: 10 }}>
             <div style={{ width: 16, height: 1, background: 'rgba(255,255,255,.15)' }} />
             Apresentação Comercial · 2026
           </div>
@@ -73,7 +66,8 @@ export function Cover() {
         <div>
           <motion.p
             variants={fade}
-            className="flex items-center gap-3 text-[9px] tracking-[.6em] uppercase text-white/35 mb-6"
+            className="flex items-center gap-3 uppercase text-white/35 mb-6 tracking-[.5em]"
+            style={{ fontSize: 11 }}
           >
             Cuiabá — Mato Grosso · Brasil
             <span style={{ flex: '0 0 36px', height: 1, background: 'linear-gradient(90deg,rgba(137,170,204,.5),transparent)' }} />
@@ -113,8 +107,8 @@ export function Cover() {
 
         {/* Bottom */}
         <motion.div variants={fade} className="flex items-end justify-between flex-wrap gap-4">
-          <div className="text-[10px] text-white/30 font-light leading-[1.9]">
-            <strong className="block text-[8.5px] tracking-[.35em] uppercase text-white/20 font-normal mb-1">
+          <div className="text-white/30 font-light leading-[1.9]" style={{ fontSize: 12 }}>
+            <strong className="block uppercase text-white/20 font-normal mb-1 tracking-[.35em]" style={{ fontSize: 10 }}>
               Localização
             </strong>
             Av. Miguel Sutil, 6741 — Duque de Caxias
@@ -126,13 +120,13 @@ export function Cover() {
               href={waLink('Olá! Gostaria de reservar o espaço da Nativas Grill Cuiabá para um evento.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-[9px] rounded-xl font-semibold text-[.75rem] tracking-[.15em] uppercase transition-all duration-300 hover:opacity-90 hover:scale-[1.02]"
-              style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#1a1208' }}
+              className="flex items-center gap-2 px-5 py-[10px] rounded-xl font-semibold tracking-[.15em] uppercase transition-all duration-300 hover:opacity-90 hover:scale-[1.02]"
+              style={{ fontSize: 13, background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#1a1208' }}
             >
               <MessageCircle size={14} strokeWidth={2} />
               Reservar Espaço
             </a>
-            <div className="liquid-glass rounded-full flex items-center gap-[8px] px-[18px] py-[8px] text-[9px] tracking-[.25em] uppercase text-white/50">
+            <div className="liquid-glass rounded-full flex items-center gap-[8px] px-[18px] py-[9px] uppercase text-white/50 tracking-[.25em]" style={{ fontSize: 10 }}>
               <span
                 className="animate-pulse"
                 style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(137,170,204,.8)', flexShrink: 0, display: 'inline-block' }}
