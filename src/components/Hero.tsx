@@ -66,7 +66,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          Espaço Privativo · Gastronomia Premium · Cuiabá · 2025
+          Espaço Privativo · Gastronomia Premium · Cuiabá · 2026
         </motion.p>
 
         {/* Heading */}

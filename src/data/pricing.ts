@@ -80,7 +80,7 @@ export const TIMELINE = [
   { year: '2006', title: 'Fundação em Goiânia',  body: 'Primeira unidade une churrasco gaúcho e buffet gourmet em um modelo inédito no Centro-Oeste.',    pill: null },
   { year: '2018', title: 'Chegada a Cuiabá',     body: 'Primeira filial nacional na Av. Miguel Sutil — divisor de águas para a expansão da rede.',       pill: 'Marco nacional' },
   { year: '2021', title: 'Inovação & Superação', body: 'Costela Fogo de Chão criada na pandemia. Tornou-se o prato mais icônico da casa.',                pill: 'Ícone gastronômico' },
-  { year: '2025', title: 'Referência em Cuiabá', body: '16 cidades no Brasil. Liderança no mercado de eventos premium em Mato Grosso.',                   pill: '16 cidades' },
+  { year: '2026', title: 'Referência em Cuiabá', body: '16 cidades no Brasil. Liderança no mercado de eventos premium em Mato Grosso.',                   pill: '16 cidades' },
 ]
 
 export const CUTS = [

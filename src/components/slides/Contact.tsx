@@ -119,7 +119,7 @@ export function Contact({ isActive }: { isActive: boolean }) {
 
           {/* Mídia Kit label */}
           <div className="text-center text-[9px] tracking-[.4em] uppercase text-white/20">
-            Mídia Kit · 2025
+            Mídia Kit · 2026
           </div>
         </div>
       </motion.div>

@@ -57,7 +57,7 @@ export function Cover() {
           </div>
           <div className="flex items-center gap-2 text-[9px] tracking-[.4em] uppercase text-white/25">
             <div style={{ width: 16, height: 1, background: 'rgba(255,255,255,.15)' }} />
-            Mídia Kit · 2025
+            Mídia Kit · 2026
           </div>
         </motion.div>
 

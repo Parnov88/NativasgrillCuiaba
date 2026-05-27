@@ -44,7 +44,7 @@ export function Loader({ onComplete }: Props) {
       >
         <Monogram size={28} />
         <span className="text-[10px] tracking-[.4em] uppercase text-white/30">
-          Nativas Grill Cuiabá — Mídia Kit 2025
+          Nativas Grill Cuiabá — Mídia Kit 2026
         </span>
       </motion.div>
 
