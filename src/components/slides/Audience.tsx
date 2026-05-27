@@ -5,8 +5,8 @@ import { DEMOGRAPHICS, OCCASIONS } from '../../data/pricing'
 export function Audience({ isActive }: { isActive: boolean }) {
   return (
     <SlideShell
-      tag="06 — Público"
-      num="06"
+      tag="08 — Público"
+      num="08"
       isActive={isActive}
       ambColor="rgba(78,133,191,.13)"
       ambPos="top:5%;right:10%"
@@ -37,7 +37,7 @@ export function Audience({ isActive }: { isActive: boolean }) {
         {/* Left: Demographics */}
         <div className="flex flex-col gap-2">
           <div className="text-[9px] tracking-[.35em] uppercase text-white/20 mb-3">
-            Demographics
+            Perfil do público
           </div>
           {DEMOGRAPHICS.map((d, i) => (
             <div key={d.label} className="flex flex-col gap-[6px] mb-3">

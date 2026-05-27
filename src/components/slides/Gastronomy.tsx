@@ -5,8 +5,8 @@ import { CUTS, BUFFET_ITEMS } from '../../data/pricing'
 export function Gastronomy({ isActive }: { isActive: boolean }) {
   return (
     <SlideShell
-      tag="04 — Gastronomia"
-      num="04"
+      tag="05 — Gastronomia"
+      num="05"
       isActive={isActive}
       ambColor="rgba(137,170,204,.1)"
       ambPos="top:20%;left:30%"

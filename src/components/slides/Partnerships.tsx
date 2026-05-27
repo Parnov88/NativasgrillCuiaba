@@ -5,8 +5,8 @@ import { PARTNERSHIPS } from '../../data/pricing'
 export function Partnerships({ isActive }: { isActive: boolean }) {
   return (
     <SlideShell
-      tag="07 — Parcerias"
-      num="07"
+      tag="09 — Parcerias"
+      num="09"
       isActive={isActive}
       ambColor="rgba(137,170,204,.13)"
       ambPos="bottom:10%;left:20%"

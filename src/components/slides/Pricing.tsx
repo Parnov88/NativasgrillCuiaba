@@ -9,7 +9,7 @@ export function Pricing({ isActive }: { isActive: boolean }) {
   const p = PERIODS[period]
 
   return (
-    <SlideShell tag="05 — Precificação" num="05" isActive={isActive}>
+    <SlideShell tag="07 — Tarifas" num="07" isActive={isActive}>
       <motion.div variants={slideItem}>
         <p className="flex items-center gap-[10px] text-[9px] tracking-[.5em] uppercase text-white/35 mb-[14px]">
           <span style={{ width: 24, height: 1, background: 'linear-gradient(90deg,rgba(255,255,255,.4),transparent)' }} />

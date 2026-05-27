@@ -12,8 +12,8 @@ const blueGrad = {
 export function Space({ isActive }: { isActive: boolean }) {
   return (
     <SlideShell
-      tag="03 — Espaço"
-      num="03"
+      tag="04 — Espaço"
+      num="04"
       isActive={isActive}
       ambColor="rgba(78,133,191,.14)"
       ambPos="bottom:15%;right:-5%"

@@ -8,8 +8,8 @@ const WA_MSG = 'Olá! Vi o mídia kit da Nativas Grill e gostaria de solicitar u
 export function Contact({ isActive }: { isActive: boolean }) {
   return (
     <SlideShell
-      tag="08 — Contato"
-      num="08"
+      tag="10 — Contato"
+      num="10"
       isActive={isActive}
       ambColor="rgba(78,133,191,.15)"
       ambPos="top:30%;left:-5%"
@@ -43,9 +43,8 @@ export function Contact({ isActive }: { isActive: boolean }) {
             className="text-[.9rem] text-white/45 leading-[1.9] font-light max-w-[420px]"
             style={{ paddingLeft: 14, borderLeft: '1.5px solid rgba(255,255,255,.07)' }}
           >
-            Seja para eventos corporativos, festas sociais, parcerias com criadores de conteúdo ou
-            ativações de marca — a Nativas Grill está disponível para construir experiências únicas
-            ao seu lado.
+            Eventos corporativos, festas sociais, parcerias com criadores de conteúdo
+            ou ativações de marca — fale com a gente e receba uma proposta personalizada.
           </p>
 
           {/* WhatsApp button */}
@@ -86,40 +85,28 @@ export function Contact({ isActive }: { isActive: boolean }) {
         </div>
 
         {/* Right: Closing card */}
-        <div className="flex flex-col gap-4">
-          <div className="glass-card rounded-2xl p-7 flex flex-col gap-5">
-            <div
-              className="font-display italic text-[clamp(3.5rem,7vw,6rem)] leading-[.9] tracking-[-0.03em]"
-              style={{
-                background: 'linear-gradient(180deg,#fff 0%,rgba(255,255,255,.4) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              Nativas<br />Grill
-            </div>
-            <div style={{ height: 1, background: 'rgba(255,255,255,.06)' }} />
-            <div className="flex flex-col gap-[6px]">
-              {[
-                'Gastronomia premium',
-                'Espaço privativo',
-                'Cuiabá · Mato Grosso',
-                'Disponível para parcerias',
-              ].map(item => (
-                <div key={item} className="flex items-center gap-2 text-[.7rem] text-white/35">
-                  <div
-                    style={{ width: 4, height: 4, borderRadius: '50%', background: 'rgba(137,170,204,.5)', flexShrink: 0 }}
-                  />
-                  {item}
-                </div>
-              ))}
-            </div>
+        <div className="glass-card rounded-2xl p-8 flex flex-col justify-between h-full">
+          <div
+            className="font-display italic text-[clamp(3rem,6vw,5.5rem)] leading-[.88] tracking-[-0.03em]"
+            style={{
+              background: 'linear-gradient(180deg,#fff 0%,rgba(255,255,255,.35) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            Nativas<br />Grill
           </div>
 
-          {/* Mídia Kit label */}
-          <div className="text-center text-[9px] tracking-[.4em] uppercase text-white/20">
-            Mídia Kit · 2026
+          <div>
+            <div style={{ height: 1, background: 'rgba(255,255,255,.06)', marginBottom: 20 }} />
+            <p className="text-[.72rem] text-white/35 leading-[1.9]">
+              Gastronomia premium · Espaço privativo<br />
+              Cuiabá — Mato Grosso · Parcerias abertas
+            </p>
+            <div className="text-[9px] tracking-[.4em] uppercase text-white/18 mt-4">
+              Mídia Kit · 2026
+            </div>
           </div>
         </div>
       </motion.div>

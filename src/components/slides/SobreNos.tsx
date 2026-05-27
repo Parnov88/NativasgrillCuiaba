@@ -44,17 +44,12 @@ export function SobreNos({ isActive }: { isActive: boolean }) {
         {/* Left: copy + CTA */}
         <div className="flex flex-col gap-5">
           <p className="text-[.87rem] text-white/50 leading-[1.95] font-light">
-            Na Nativas Grill, oferecemos uma experiência completa para quem aprecia um bom
-            churrasco. Nosso rodízio conta com cortes selecionados de carnes nacionais e
-            importadas, preparados para agradar os mais diversos paladares. Além das carnes
-            servidas diretamente na mesa, você encontra um buffet completo com saladas frescas,
-            acompanhamentos quentes e diversas opções para montar o prato do seu jeito.
+            Rodízio premium com cortes nacionais e importados servidos diretamente à mesa,
+            buffet gourmet com mais de 60 itens e carta de bebidas cuidadosamente selecionada.
           </p>
           <p className="text-[.87rem] text-white/50 leading-[1.95] font-light">
-            Para completar a experiência, contamos com uma carta de drinks refrescantes, uma
-            adega com rótulos nacionais e importados e um menu de sobremesas caseiras para
-            fechar seu momento com chave de ouro. Tudo isso na icônica Av. Miguel Sutil — a
-            atmosfera perfeita para aproveitar bons momentos em Cuiabá.
+            Na icônica Av. Miguel Sutil, o ambiente ideal para eventos corporativos,
+            celebrações e momentos que ficam na memória.
           </p>
 
           <a
