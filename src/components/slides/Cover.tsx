@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
+import { MessageCircle } from 'lucide-react'
 import { Monogram } from '../Loader'
+import { waLink } from '../../lib/utils'
 
 const fade = {
   hidden: { opacity: 0, y: 16 },
@@ -120,12 +122,24 @@ export function Cover() {
             <br />
             Cuiabá — MT · CEP 78043-000 · (65) 3621-4642
           </div>
-          <div className="liquid-glass rounded-full flex items-center gap-[8px] px-[18px] py-[8px] text-[9px] tracking-[.25em] uppercase text-white/50">
-            <span
-              className="animate-pulse"
-              style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(137,170,204,.8)', flexShrink: 0, display: 'inline-block' }}
-            />
-            Disponível para parcerias
+          <div className="flex items-center gap-3">
+            <a
+              href={waLink('Olá! Gostaria de reservar o espaço da Nativas Grill Cuiabá para um evento.')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-[9px] rounded-xl font-semibold text-[.75rem] tracking-[.15em] uppercase transition-all duration-300 hover:opacity-90 hover:scale-[1.02]"
+              style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#1a1208' }}
+            >
+              <MessageCircle size={14} strokeWidth={2} />
+              Reservar Espaço
+            </a>
+            <div className="liquid-glass rounded-full flex items-center gap-[8px] px-[18px] py-[8px] text-[9px] tracking-[.25em] uppercase text-white/50">
+              <span
+                className="animate-pulse"
+                style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(137,170,204,.8)', flexShrink: 0, display: 'inline-block' }}
+              />
+              Disponível para parcerias
+            </div>
           </div>
         </motion.div>
       </motion.div>

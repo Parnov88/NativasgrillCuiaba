@@ -56,42 +56,50 @@ export function Space({ isActive }: { isActive: boolean }) {
 
         {/* Right: Capacity cards */}
         <div className="flex flex-col gap-4">
-          <div className="glass-card rounded-2xl p-6">
-            <div className="text-[9px] tracking-[.3em] uppercase text-white/25 mb-2">
-              Capacidade máxima
-            </div>
-            <div className="font-display italic text-[3.2rem] leading-[1] mb-2" style={blueGrad}>
-              500+
-            </div>
-            <div className="text-[.7rem] text-white/40 leading-[1.8]">
-              pessoas no salão principal com todas as facilidades inclusas
-            </div>
-          </div>
-
+          {/* Capacidade */}
           <div className="glass-card rounded-2xl p-6">
             <div className="text-[9px] tracking-[.3em] uppercase text-white/25 mb-4">
-              Eventos privados
+              Capacidade do espaço
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-[.72rem] text-white/45">Abertura privativa</span>
-                <span className="text-[.72rem] font-semibold text-white/70">50 pessoas</span>
+                <span className="text-[.72rem] text-white/45">Com decoração</span>
+                <span className="text-[.72rem] font-semibold text-white/70">160 pessoas</span>
               </div>
               <div style={{ height: 1, background: 'rgba(255,255,255,.05)' }} />
               <div className="flex items-center justify-between">
-                <span className="text-[.72rem] text-white/45">Exclusividade total</span>
-                <span className="text-[.72rem] font-semibold text-white/70">120+ pessoas</span>
+                <span className="text-[.72rem] text-white/45">Sem decoração</span>
+                <span className="text-[.72rem] font-semibold text-white/70">180 lugares</span>
               </div>
-              <div style={{ height: 1, background: 'rgba(255,255,255,.05)' }} />
-              <div className="flex items-center justify-between">
-                <span className="text-[.72rem] text-white/45">Projetor HD incluso</span>
-                <span
-                  className="text-[.72rem] font-semibold"
-                  style={{ color: 'rgba(137,170,204,.8)' }}
-                >
-                  sem custo
-                </span>
-              </div>
+            </div>
+          </div>
+
+          {/* Condições */}
+          <div className="glass-card rounded-2xl p-6">
+            <div className="text-[9px] tracking-[.3em] uppercase text-white/25 mb-4">
+              Condições de reserva
+            </div>
+            <div className="flex flex-col gap-3">
+              {[
+                ['Abertura mínima',        '50 pessoas'],
+                ['Exclusividade total',    '120+ pessoas'],
+                ['Abaixo de 50 pessoas',   'taxa a negociar'],
+                ['Projetor HD',            'incluso'],
+                ['Decoração e música',     'por conta do contratante'],
+              ].map(([label, value], i, arr) => (
+                <div key={label}>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[.72rem] text-white/45">{label}</span>
+                    <span
+                      className="text-[.72rem] font-semibold"
+                      style={{ color: i < 2 ? 'rgba(255,255,255,.7)' : 'rgba(137,170,204,.8)' }}
+                    >
+                      {value}
+                    </span>
+                  </div>
+                  {i < arr.length - 1 && <div style={{ height: 1, background: 'rgba(255,255,255,.05)', marginTop: 10 }} />}
+                </div>
+              ))}
             </div>
           </div>
         </div>
