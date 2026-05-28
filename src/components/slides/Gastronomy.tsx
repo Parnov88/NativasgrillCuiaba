@@ -32,9 +32,6 @@ export function Gastronomy({ isActive }: { isActive: boolean }) {
 
       {/* Cuts marquee */}
       <motion.div variants={slideItem} className="overflow-hidden mb-4">
-        <div className="uppercase text-white/25 mb-2 tracking-[.4em]" style={{ fontSize: 10 }}>
-          Cortes nobres · Rodízio de carnes
-        </div>
         <div
           className="overflow-hidden py-3"
           style={{ borderTop: '1px solid rgba(255,255,255,.05)', borderBottom: '1px solid rgba(255,255,255,.05)' }}
