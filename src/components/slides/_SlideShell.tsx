@@ -50,11 +50,6 @@ export function SlideShell({
           ...parsePosStyle(ambPos),
         }}
       />
-      {/* slide tag — top-right, readable size */}
-      <div className="absolute top-7 right-10 z-[2] flex items-center gap-2 tracking-[.45em] uppercase" style={{ fontSize: 10, color: 'rgba(255,255,255,.3)' }}>
-        <div style={{ width: 20, height: 1, background: 'rgba(255,255,255,.15)' }} />
-        {tag}
-      </div>
       {/* ghost number */}
       <div
         className="absolute bottom-[-28px] right-5 z-0 font-display italic text-white/[.025] leading-none select-none pointer-events-none"

@@ -17,10 +17,10 @@ const fade = {
 
 export function Footer({ isActive }: { isActive: boolean }) {
   return (
-    <footer className="slide flex-col" style={{ background: '#000' }}>
+    <footer className="slide flex-col" style={{ background: '#000', height: '50vh' }}>
       <div className="amb" style={{ width: 600, height: 600, top: '20%', left: '50%', transform: 'translateX(-50%)', background: 'radial-gradient(circle,rgba(78,133,191,.06) 0%,transparent 70%)' }} />
 
-      <div className="relative z-[2] flex flex-col h-full px-8 md:px-14 pt-14 pb-10 justify-between">
+      <div className="relative z-[2] flex flex-col h-full px-8 md:px-14 pt-8 pb-6 justify-between">
 
         {/* ── TOP: eyebrow ── */}
         <motion.div custom={0} variants={fade} initial="hidden" animate={isActive ? 'show' : 'hidden'}
