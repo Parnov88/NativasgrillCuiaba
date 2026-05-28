@@ -76,16 +76,31 @@ export function Cover() {
           <motion.h1
             variants={fade}
             className="font-display italic leading-[.88] tracking-[-0.04em]"
-            style={{
-              fontSize: 'clamp(5rem,12vw,11rem)',
-              background: 'linear-gradient(180deg,#fff 0%,rgba(255,255,255,.95) 40%,rgba(255,255,255,.6) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+            style={{ fontSize: 'clamp(5rem,12vw,11rem)' }}
           >
-            <span style={{ fontStyle: 'normal', display: 'block' }}>Nativas</span>
-            Grill
+            <span
+              style={{
+                fontStyle: 'normal',
+                display: 'block',
+                background: 'linear-gradient(180deg,#fff 0%,rgba(255,255,255,.95) 40%,rgba(255,255,255,.6) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Nativas
+            </span>
+            <span
+              style={{
+                display: 'block',
+                background: 'linear-gradient(180deg,#E8C96A 0%,#C9A84C 60%,#a8883a 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Grill
+            </span>
           </motion.h1>
           <motion.div
             variants={fade}

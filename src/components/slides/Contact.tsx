@@ -84,29 +84,35 @@ export function Contact({ isActive }: { isActive: boolean }) {
           </div>
         </div>
 
-        {/* Right: Closing card */}
-        <div className="glass-card rounded-2xl p-8 flex flex-col justify-between h-full">
+        {/* Right: Brand photo card */}
+        <div
+          className="relative rounded-2xl overflow-hidden h-full group"
+          style={{
+            minHeight: 320,
+            border: '1px solid rgba(255,255,255,.08)',
+          }}
+        >
+          {/* Photo */}
+          <img
+            src="/img/nativasgrill.webp"
+            alt="Nativas Grill Cuiabá"
+            className="absolute inset-0 w-full h-full object-cover scale-[1.04] group-hover:scale-[1.08] transition-transform duration-700"
+            loading="lazy"
+          />
+          {/* Subtle dark vignette — preserves image */}
           <div
-            className="font-display italic text-[clamp(3rem,6vw,5.5rem)] leading-[.88] tracking-[-0.03em]"
-            style={{
-              background: 'linear-gradient(180deg,#fff 0%,rgba(255,255,255,.35) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            Nativas<br />Grill
-          </div>
-
-          <div>
-            <div style={{ height: 1, background: 'rgba(255,255,255,.06)', marginBottom: 20 }} />
-            <p className="text-[.72rem] text-white/35 leading-[1.9]">
-              Gastronomia premium · Espaço privativo<br />
-              Cuiabá — Mato Grosso · Parcerias abertas
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.25) 100%)' }}
+          />
+          {/* Bottom metadata */}
+          <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 z-[1]">
+            <div style={{ height: '0.5px', background: 'rgba(255,255,255,.15)', marginBottom: 14 }} />
+            <p className="caption text-white/60">
+              Gastronomia premium · Espaço privativo
             </p>
-            <div className="text-[9px] tracking-[.4em] uppercase text-white/18 mt-4">
-              Cuiabá · 2026
-            </div>
+            <p className="eyebrow text-white/30 mt-2">
+              Cuiabá — Mato Grosso · 2026
+            </p>
           </div>
         </div>
       </motion.div>
