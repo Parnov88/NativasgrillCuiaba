@@ -5,10 +5,10 @@ import { PERIODS, COMBOS, type PeriodKey } from '../../data/pricing'
 import { fmt } from '../../lib/utils'
 
 const COMBO_IMGS = [
-  '/img/pricing-livre.png',
-  '/img/pricing-soft.png',
-  '/img/pricing-intermediario.png',
-  '/img/pricing-premium.png',
+  '/img/pricing-livre.webp',
+  '/img/pricing-soft.webp',
+  '/img/pricing-intermediario.webp',
+  '/img/pricing-premium.webp',
 ]
 
 const PERIOD_KEYS = Object.keys(PERIODS) as PeriodKey[]
@@ -62,16 +62,28 @@ export function Pricing({ isActive }: { isActive: boolean }) {
         </div>
       </motion.div>
 
-      {/* Cards */}
-      <motion.div variants={slideItem} className="grid grid-cols-2 md:grid-cols-4 gap-[10px] flex-1">
+      {/* Cards — horizontal scroll on mobile, 4-col grid on desktop */}
+      <motion.div
+        variants={slideItem}
+        className="flex-1 flex flex-col min-h-0"
+      >
+        {/* mobile: scroll row / desktop: grid */}
+        <div
+          className="md:grid md:grid-cols-4 md:gap-[10px] md:flex-1 h-full
+                     flex gap-[10px] overflow-x-auto pb-1"
+          style={{ scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch' }}
+        >
         {COMBOS.map((c, i) => (
           <div
             key={c.name}
-            className="relative rounded-2xl overflow-hidden group cursor-default"
+            className="relative rounded-2xl overflow-hidden group cursor-default flex-shrink-0
+                       w-[75vw] md:w-auto"
             style={{
+              scrollSnapAlign: 'start',
               border: c.featured
                 ? '1px solid rgba(137,170,204,.2)'
                 : '1px solid rgba(255,255,255,.06)',
+              minHeight: 320,
             }}
           >
             {/* Photo fill */}
@@ -144,6 +156,7 @@ export function Pricing({ isActive }: { isActive: boolean }) {
             </div>
           </div>
         ))}
+        </div>
       </motion.div>
 
       {/* Footer note */}

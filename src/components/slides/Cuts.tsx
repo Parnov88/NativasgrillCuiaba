@@ -4,10 +4,10 @@ import { SlideShell, slideItem } from './_SlideShell'
 import { waLink } from '../../lib/utils'
 
 const FEATURED_CUTS = [
-  { name: 'Picanha Angus', img: '/img/cuts-picanha.png' },
-  { name: 'Baby Beef',     img: '/img/cuts-babbeef.png' },
-  { name: 'Cordeiro',      img: '/img/cuts-cordeiro.png' },
-  { name: 'Bife Ancho',    img: '/img/cuts-bifeancho.png' },
+  { name: 'Picanha Angus', img: '/img/cuts-picanha.webp' },
+  { name: 'Baby Beef',     img: '/img/cuts-babbeef.webp' },
+  { name: 'Cordeiro',      img: '/img/cuts-cordeiro.webp' },
+  { name: 'Bife Ancho',    img: '/img/cuts-bifeancho.webp' },
 ]
 
 export function Cuts({ isActive }: { isActive: boolean }) {

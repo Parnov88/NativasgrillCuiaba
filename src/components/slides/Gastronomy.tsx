@@ -83,8 +83,8 @@ export function Gastronomy({ isActive }: { isActive: boolean }) {
         {/* Photo row — taller and fills remaining space */}
         <div className="grid grid-cols-2 gap-3 flex-1" style={{ minHeight: 180 }}>
           {[
-            { src: '/img/gastro-buffet.png', label: 'Buffet Gourmet · +60 itens' },
-            { src: '/img/gastro-sushi.png',  label: 'Culinária Japonesa · Ao vivo' },
+            { src: '/img/gastro-buffet.webp', label: 'Buffet Gourmet · +60 itens' },
+            { src: '/img/gastro-sushi.webp',  label: 'Culinária Japonesa · Ao vivo' },
           ].map(p => (
             <div key={p.src} className="relative rounded-2xl overflow-hidden group">
               <img

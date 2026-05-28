@@ -17,9 +17,10 @@ export function Cover() {
       />
       {/* hero background photo */}
       <img
-        src="/img/cover-hero.png"
+        src="/img/cover-hero.webp"
         alt=""
         className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-40 pointer-events-none"
+        fetchPriority="high"
       />
       {/* grid */}
       <div
@@ -138,13 +139,25 @@ export function Cover() {
       </motion.div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-[3]">
-        <span className="text-[8.5px] tracking-[.4em] uppercase" style={{ color: 'rgba(255,255,255,.18)' }}>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-[3]">
+        <span className="uppercase tracking-[.4em]" style={{ fontSize: 10, color: 'rgba(255,255,255,.3)' }}>
           Avançar
         </span>
-        <div style={{ width: 1, height: 24, background: 'rgba(255,255,255,.08)', overflow: 'hidden', position: 'relative' }}>
-          <div className="ssh-line" style={{ position: 'absolute', inset: 0 }} />
-        </div>
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          style={{ animation: 'bounce-down 1.6s ease-in-out infinite' }}
+        >
+          <path
+            d="M7 10.5L14 17.5L21 10.5"
+            stroke="rgba(137,170,204,0.7)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
     </div>
   )

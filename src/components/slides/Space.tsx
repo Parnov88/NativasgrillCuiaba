@@ -2,32 +2,29 @@ import { motion } from 'framer-motion'
 import { SlideShell, slideItem } from './_SlideShell'
 import { AMENITIES } from '../../data/pricing'
 
-const blueGrad = {
-  background: 'linear-gradient(90deg,#89AACC,#4E85BF)',
-  WebkitBackgroundClip: 'text' as const,
-  WebkitTextFillColor: 'transparent' as const,
-  backgroundClip: 'text' as const,
-}
-
 export function Space({ isActive }: { isActive: boolean }) {
   return (
     <SlideShell
       tag="04 — Espaço"
       num="04"
       isActive={isActive}
-      ambColor="rgba(78,133,191,.14)"
-      ambPos="bottom:15%;right:-5%"
+      ambColor="rgba(78,133,191,.12)"
+      ambPos="bottom:10%;right:-5%"
     >
       {/* Heading */}
-      <motion.div variants={slideItem}>
-        <p className="flex items-center gap-[10px] uppercase text-white/35 mb-[12px]" style={{ fontSize: 10, letterSpacing: '0.45em' }}>
-          <span style={{ width: 24, height: 1, background: 'linear-gradient(90deg,rgba(255,255,255,.4),transparent)' }} />
+      <motion.div variants={slideItem} className="mb-6">
+        <p
+          className="flex items-center gap-3 uppercase text-white/30 mb-3"
+          style={{ fontSize: 10, letterSpacing: '0.5em' }}
+        >
+          <span style={{ width: 20, height: 1, background: 'linear-gradient(90deg,rgba(255,255,255,.35),transparent)', flexShrink: 0 }} />
           Infraestrutura
         </p>
         <h2
-          className="font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.05] tracking-[-0.02em] mb-[16px]"
+          className="font-display leading-[1.03] tracking-[-0.02em]"
           style={{
-            background: 'linear-gradient(180deg,#fff 30%,rgba(255,255,255,.7) 100%)',
+            fontSize: 'clamp(2rem,4vw,3.4rem)',
+            background: 'linear-gradient(175deg,#fff 30%,rgba(255,255,255,.6) 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -37,71 +34,150 @@ export function Space({ isActive }: { isActive: boolean }) {
         </h2>
       </motion.div>
 
+      {/* Main grid — two columns, perfectly balanced */}
       <motion.div
         variants={slideItem}
-        className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 flex-1 items-stretch mt-1"
+        className="grid grid-cols-1 md:grid-cols-[1.45fr_1fr] gap-5 flex-1"
       >
-        {/* Left: Amenities grid */}
-        <div className="grid grid-cols-2 gap-3 content-start">
+        {/* ── LEFT: Amenities ── */}
+        <div className="grid grid-cols-2 gap-[10px] content-start">
           {AMENITIES.map(a => (
             <div
               key={a.title}
-              className="glass-card rounded-2xl p-5 hover:bg-white/[.04] transition-all duration-300 cursor-default"
+              className="group rounded-2xl p-5 flex flex-col gap-2 cursor-default transition-all duration-300 hover:bg-white/[.04]"
+              style={{
+                background: 'rgba(255,255,255,.02)',
+                border: '0.5px solid rgba(255,255,255,.09)',
+                backdropFilter: 'blur(12px)',
+              }}
             >
-              <div className="font-semibold text-white/80 mb-[6px]" style={{ fontSize: 14 }}>{a.title}</div>
-              <div className="text-white/40 leading-[1.7]" style={{ fontSize: 12.5 }}>{a.desc}</div>
+              {/* Accent dot */}
+              <div
+                className="w-[5px] h-[5px] rounded-full mb-1 transition-opacity duration-300 opacity-50 group-hover:opacity-100"
+                style={{ background: 'linear-gradient(135deg,#89AACC,#4E85BF)' }}
+              />
+              <div
+                className="font-medium text-white/80 leading-snug tracking-[0.01em] transition-colors duration-300 group-hover:text-white/95"
+                style={{ fontSize: 13.5 }}
+              >
+                {a.title}
+              </div>
+              <div
+                className="text-white/38 leading-[1.65] font-light"
+                style={{ fontSize: 12 }}
+              >
+                {a.desc}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Right: Capacity + Conditions */}
-        <div className="flex flex-col gap-4">
-          {/* Capacidade */}
-          <div className="glass-card rounded-2xl p-6">
-            <div className="uppercase text-white/30 mb-5 tracking-[.3em]" style={{ fontSize: 10 }}>
-              Capacidade do espaço
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center justify-between">
-                <span className="text-white/50" style={{ fontSize: 14 }}>Com decoração</span>
-                <span className="font-semibold" style={{ ...blueGrad, fontSize: 22, fontFamily: 'var(--font-display)', fontStyle: 'italic' }}>160</span>
-              </div>
-              <div style={{ height: 1, background: 'rgba(255,255,255,.05)' }} />
-              <div className="flex items-center justify-between">
-                <span className="text-white/50" style={{ fontSize: 14 }}>Sem decoração</span>
-                <span className="font-semibold" style={{ ...blueGrad, fontSize: 22, fontFamily: 'var(--font-display)', fontStyle: 'italic' }}>180</span>
-              </div>
-            </div>
-          </div>
+        {/* ── RIGHT: Capacity + Conditions ── */}
+        <div className="flex flex-col gap-[10px]">
 
-          {/* Condições */}
-          <div className="glass-card rounded-2xl p-6 flex-1">
-            <div className="uppercase text-white/30 mb-5 tracking-[.3em]" style={{ fontSize: 10 }}>
-              Condições de reserva
-            </div>
+          {/* Capacidade */}
+          <div
+            className="rounded-2xl p-6"
+            style={{
+              background: 'rgba(255,255,255,.02)',
+              border: '0.5px solid rgba(255,255,255,.09)',
+              backdropFilter: 'blur(12px)',
+            }}
+          >
+            <p
+              className="uppercase text-white/28 mb-5 tracking-[0.45em]"
+              style={{ fontSize: 9.5 }}
+            >
+              Capacidade do espaço
+            </p>
+
             <div className="flex flex-col gap-0">
               {[
-                ['Abertura mínima',      '50 pessoas'],
-                ['Exclusividade total',  '120+ pessoas'],
-                ['Abaixo de 50 pessoas', 'taxa a negociar'],
-                ['Projetor HD',          'incluso'],
-                ['Decoração e música',   'por conta do contratante'],
-              ].map(([label, value], i, arr) => (
-                <div key={label}>
+                { label: 'Com decoração',  value: '160', unit: 'pessoas' },
+                { label: 'Sem decoração',  value: '180', unit: 'lugares' },
+              ].map((row, i) => (
+                <div key={row.label}>
                   <div className="flex items-center justify-between py-3">
-                    <span className="text-white/45" style={{ fontSize: 13 }}>{label}</span>
-                    <span
-                      className="font-semibold text-right"
-                      style={{ fontSize: 13, color: i < 2 ? 'rgba(255,255,255,.75)' : 'rgba(137,170,204,.85)' }}
-                    >
-                      {value}
+                    <span className="text-white/45 font-light" style={{ fontSize: 13 }}>
+                      {row.label}
                     </span>
+                    <div className="flex items-baseline gap-[5px]">
+                      <span
+                        className="font-display italic leading-none"
+                        style={{
+                          fontSize: 28,
+                          background: 'linear-gradient(90deg,#89AACC,#c8ddee)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                        }}
+                      >
+                        {row.value}
+                      </span>
+                      <span className="text-white/25 font-light" style={{ fontSize: 11 }}>
+                        {row.unit}
+                      </span>
+                    </div>
                   </div>
-                  {i < arr.length - 1 && <div style={{ height: 1, background: 'rgba(255,255,255,.05)' }} />}
+                  {i === 0 && (
+                    <div style={{ height: '0.5px', background: 'rgba(255,255,255,.06)' }} />
+                  )}
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Condições de Reserva */}
+          <div
+            className="rounded-2xl p-6 flex-1"
+            style={{
+              background: 'rgba(255,255,255,.02)',
+              border: '0.5px solid rgba(255,255,255,.09)',
+              backdropFilter: 'blur(12px)',
+            }}
+          >
+            <p
+              className="uppercase text-white/28 mb-5 tracking-[0.45em]"
+              style={{ fontSize: 9.5 }}
+            >
+              Condições de reserva
+            </p>
+
+            <div className="flex flex-col">
+              {[
+                { label: 'Abertura mínima',      value: '50 pessoas',              highlight: false },
+                { label: 'Exclusividade total',  value: '120+ pessoas',            highlight: true  },
+                { label: 'Abaixo de 50 pessoas', value: 'Taxa a negociar',         highlight: false },
+                { label: 'Projetor HD',          value: 'Incluso',                 highlight: true  },
+                { label: 'Decoração e música',   value: 'Por conta do contratante',highlight: false },
+              ].map((row, i, arr) => (
+                <div key={row.label}>
+                  <div className="flex items-center justify-between py-[11px]">
+                    <span
+                      className="text-white/42 font-light pr-4"
+                      style={{ fontSize: 12.5 }}
+                    >
+                      {row.label}
+                    </span>
+                    <span
+                      className="font-medium text-right flex-shrink-0"
+                      style={{
+                        fontSize: 12.5,
+                        color: row.highlight ? 'rgba(137,170,204,.9)' : 'rgba(255,255,255,.6)',
+                        fontVariantNumeric: 'tabular-nums',
+                      }}
+                    >
+                      {row.value}
+                    </span>
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div style={{ height: '0.5px', background: 'rgba(255,255,255,.05)' }} />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </motion.div>
     </SlideShell>

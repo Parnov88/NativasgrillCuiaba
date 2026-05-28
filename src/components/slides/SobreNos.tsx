@@ -4,9 +4,9 @@ import { SlideShell, slideItem } from './_SlideShell'
 import { waLink } from '../../lib/utils'
 
 const PHOTOS = [
-  { url: '/img/sobrenos-salao.png',  alt: 'Salão Nativas Grill'    },
-  { url: '/img/sobrenos-mesa.png',   alt: 'Mesa Nativas Grill'     },
-  { url: '/img/sobrenos-grelha.png', alt: 'Parrilla Nativas Grill' },
+  { url: '/img/sobrenos-salao.webp',  alt: 'Salão Nativas Grill'    },
+  { url: '/img/sobrenos-mesa.webp',   alt: 'Mesa Nativas Grill'     },
+  { url: '/img/sobrenos-grelha.webp', alt: 'Parrilla Nativas Grill' },
 ]
 
 const HIGHLIGHTS = [
