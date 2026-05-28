@@ -35,24 +35,34 @@ export function Contact({ isActive }: { isActive: boolean }) {
 
       <motion.div
         variants={slideItem}
-        className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 flex-1 items-center mt-2"
+        className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 flex-1 items-stretch mt-2"
       >
         {/* Left: CTA */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col justify-between gap-5">
           <p
-            className="text-[.9rem] text-white/45 leading-[1.9] font-light max-w-[420px]"
+            className="text-[.95rem] text-white/45 leading-[1.9] font-light"
             style={{ paddingLeft: 14, borderLeft: '1.5px solid rgba(255,255,255,.07)' }}
           >
             Eventos corporativos, festas sociais, parcerias com criadores de conteúdo
             ou ativações de marca — fale com a gente e receba uma proposta personalizada.
           </p>
 
+          {/* Stats rápidos */}
+          <div className="flex gap-8">
+            {[['160', 'Pessoas no espaço'], ['2018', 'Em Cuiabá'], ['60+', 'Itens no buffet']].map(([n, l]) => (
+              <div key={n}>
+                <div className="font-display italic leading-[1]" style={{ fontSize: 28, background: 'linear-gradient(90deg,#89AACC,#4E85BF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{n}</div>
+                <div className="eyebrow text-white/25 mt-1">{l}</div>
+              </div>
+            ))}
+          </div>
+
           {/* WhatsApp button */}
           <a
             href={waLink(WA_MSG)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white text-[.85rem] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg w-fit"
+            className="flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white text-[.85rem] transition-all duration-300 hover:scale-[1.02] w-fit"
             style={{ background: 'linear-gradient(135deg,#89AACC,#4E85BF)' }}
           >
             <MessageCircle size={18} strokeWidth={1.5} />
@@ -60,7 +70,7 @@ export function Contact({ isActive }: { isActive: boolean }) {
           </a>
 
           {/* Contact info */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 pt-2" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
             <a
               href="tel:+556536214642"
               className="flex items-center gap-3 text-[.75rem] text-white/40 hover:text-white/70 transition-colors duration-200"
