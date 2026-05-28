@@ -72,12 +72,8 @@ export function Cuts({ isActive }: { isActive: boolean }) {
             />
             {/* Name */}
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <div className="font-semibold text-white mb-[8px] leading-tight" style={{ fontSize: 15 }}>
-                {cut.name}
-              </div>
-              <div
-                style={{ width: 28, height: 2, background: 'linear-gradient(90deg,#C9A84C,#E8C96A)', borderRadius: 2 }}
-              />
+              <div className="caption mb-[10px]">{cut.name}</div>
+              <div style={{ width: 24, height: 1.5, background: 'linear-gradient(90deg,#C9A84C,#E8C96A)', borderRadius: 2 }} />
             </div>
           </div>
         ))}

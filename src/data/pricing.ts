@@ -20,7 +20,7 @@ export const COMBOS = [
 
 export const SLIDE_LABELS = [
   'Capa', 'Identidade', 'Sobre Nós', 'Espaço', 'Gastronomia',
-  'Cortes', 'Tarifas', 'Público', 'Parcerias', 'Contato',
+  'Cortes', 'Tarifas', 'Público', 'Parcerias', 'Contato', 'Rodapé',
 ]
 
 export const AMENITIES = [

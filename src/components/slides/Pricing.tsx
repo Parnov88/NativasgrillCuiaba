@@ -112,10 +112,10 @@ export function Pricing({ isActive }: { isActive: boolean }) {
             {/* Content pinned to bottom */}
             <div className="absolute inset-x-0 bottom-0 z-[1] p-[16px] pb-[18px] flex flex-col gap-[6px]">
               {/* Combo name */}
-              <div className="text-[.8rem] font-semibold text-white leading-[1.2]">{c.name}</div>
+              <div className="caption">{c.name}</div>
 
               {/* Short desc */}
-              <div className="text-[.62rem] text-white/45 leading-[1.6]">{c.desc}</div>
+              <div className="text-white/40 leading-[1.6]" style={{ fontSize: 11, letterSpacing: '0.04em' }}>{c.desc}</div>
 
               {/* Divider */}
               <div style={{ height: 1, background: 'rgba(255,255,255,.08)', margin: '4px 0' }} />

@@ -93,7 +93,8 @@ export function Gastronomy({ isActive }: { isActive: boolean }) {
                 className="absolute inset-0 w-full h-full object-cover scale-[1.22] transition-transform duration-700 group-hover:scale-[1.3] opacity-90"
               />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.08) 55%)' }} />
-              <div className="absolute bottom-0 left-0 right-0 p-4 font-semibold text-white/85 tracking-[.03em]" style={{ fontSize: 13 }}>
+              <div className="caption absolute bottom-0 left-0 right-0 px-4 pb-4 pt-8"
+                style={{ background: 'linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 100%)' }}>
                 {p.label}
               </div>
             </div>

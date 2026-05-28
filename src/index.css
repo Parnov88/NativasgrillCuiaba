@@ -157,6 +157,37 @@ body {
   50%       { transform: translateY(7px); opacity: 1; }
 }
 
+/* — TYPOGRAPHIC SCALE  S_n = 10 × 1.250^n — */
+:root {
+  --ts-0: 10px;    /* legal / copyright          */
+  --ts-1: 12.5px;  /* caption / legend           */
+  --ts-2: 15.6px;  /* body                       */
+  --ts-3: 19.5px;  /* lead / frase institucional */
+  --ts-4: 24.4px;  /* sub-heading                */
+  --ts-5: 30.5px;  /* section title              */
+}
+
+/* Legenda de foto — padrão luxo */
+.caption {
+  font-family: var(--font-sans);
+  font-size: var(--ts-1);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  line-height: 1.4;
+}
+
+/* Rótulo de seção — eyebrow */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--ts-0);
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+}
+
 /* — PRINT — */
 @media print {
   @page { size: A4 landscape; margin: 0; }
