@@ -5,19 +5,10 @@ const MAPS_URL =
 
 export function Footer() {
   return (
-    <footer className="slide" style={{ background: '#000' }}>
+    <footer className="slide" style={{ background: '#000', height: '40vh' }}>
 
-      {/* subtle ambient */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 70% 50% at 50% 100%, rgba(201,168,76,.04) 0%, transparent 70%)',
-        }}
-      />
-
-      {/* content pinned to bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-[2]">
+      {/* content centered */}
+      <div className="relative z-[2] flex flex-col justify-center h-full">
 
         {/* separator */}
         <div style={{ height: '0.5px', background: 'rgba(255,255,255,.08)' }} />
