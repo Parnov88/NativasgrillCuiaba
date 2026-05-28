@@ -11,7 +11,7 @@ export function Contact({ isActive }: { isActive: boolean }) {
       tag="10 — Contato"
       num="10"
       isActive={isActive}
-      ambColor="rgba(78,133,191,.15)"
+      ambColor="rgba(201,168,76,.15)"
       ambPos="top:30%;left:-5%"
     >
       <motion.div
@@ -61,7 +61,7 @@ export function Contact({ isActive }: { isActive: boolean }) {
                   className="font-display italic leading-[1]"
                   style={{
                     fontSize: 26,
-                    background: 'linear-gradient(90deg,#89AACC,#4E85BF)',
+                    background: 'linear-gradient(90deg,#E8C96A,#C9A84C)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -80,7 +80,7 @@ export function Contact({ isActive }: { isActive: boolean }) {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 hover:scale-[1.02] w-fit"
-            style={{ fontSize: 14, background: 'linear-gradient(135deg,#89AACC,#4E85BF)' }}
+            style={{ fontSize: 14, background: 'linear-gradient(135deg,#E8C96A,#C9A84C)' }}
           >
             <MessageCircle size={17} strokeWidth={1.5} />
             Solicitar proposta via WhatsApp
@@ -96,11 +96,11 @@ export function Contact({ isActive }: { isActive: boolean }) {
               className="flex items-center gap-3 text-white/40 hover:text-white/70 transition-colors duration-200"
               style={{ fontSize: 13 }}
             >
-              <Phone size={13} strokeWidth={1.5} style={{ flexShrink: 0, color: 'rgba(137,170,204,.5)' }} />
+              <Phone size={13} strokeWidth={1.5} style={{ flexShrink: 0, color: 'rgba(232,201,106,.5)' }} />
               (65) 3621-4642
             </a>
             <div className="flex items-start gap-3 text-white/40" style={{ fontSize: 13 }}>
-              <MapPin size={13} strokeWidth={1.5} style={{ flexShrink: 0, marginTop: 2, color: 'rgba(137,170,204,.5)' }} />
+              <MapPin size={13} strokeWidth={1.5} style={{ flexShrink: 0, marginTop: 2, color: 'rgba(232,201,106,.5)' }} />
               <span>Av. Miguel Sutil, 6741 — Duque de Caxias<br />Cuiabá — MT · CEP 78043-000</span>
             </div>
             <a
@@ -110,7 +110,7 @@ export function Contact({ isActive }: { isActive: boolean }) {
               className="flex items-center gap-3 text-white/40 hover:text-white/70 transition-colors duration-200"
               style={{ fontSize: 13 }}
             >
-              <Instagram size={13} strokeWidth={1.5} style={{ flexShrink: 0, color: 'rgba(137,170,204,.5)' }} />
+              <Instagram size={13} strokeWidth={1.5} style={{ flexShrink: 0, color: 'rgba(232,201,106,.5)' }} />
               @nativasgrill
             </a>
           </div>

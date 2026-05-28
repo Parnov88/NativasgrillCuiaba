@@ -8,7 +8,7 @@ export function Audience({ isActive }: { isActive: boolean }) {
       tag="08 — Público"
       num="08"
       isActive={isActive}
-      ambColor="rgba(78,133,191,.13)"
+      ambColor="rgba(201,168,76,.13)"
       ambPos="top:5%;right:10%"
     >
       {/* Heading */}
@@ -47,7 +47,7 @@ export function Audience({ isActive }: { isActive: boolean }) {
                   className="font-display italic leading-[1]"
                   style={{
                     fontSize: 20,
-                    background: 'linear-gradient(90deg,#89AACC,#4E85BF)',
+                    background: 'linear-gradient(90deg,#E8C96A,#C9A84C)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -59,7 +59,7 @@ export function Audience({ isActive }: { isActive: boolean }) {
               <div className="h-[3px] rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,.06)' }}>
                 <motion.div
                   className="h-full rounded-full"
-                  style={{ background: 'linear-gradient(90deg,#89AACC,#4E85BF)' }}
+                  style={{ background: 'linear-gradient(90deg,#E8C96A,#C9A84C)' }}
                   initial={{ width: '0%' }}
                   animate={{ width: isActive ? `${d.pct}%` : '0%' }}
                   transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.4 + i * 0.1 }}
@@ -89,7 +89,7 @@ export function Audience({ isActive }: { isActive: boolean }) {
             >
               <div
                 className="w-[7px] h-[7px] rounded-full flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg,#89AACC,#4E85BF)' }}
+                style={{ background: 'linear-gradient(135deg,#E8C96A,#C9A84C)' }}
               />
               <div>
                 <div className="font-semibold text-white/75 mb-[3px]" style={{ fontSize: 14 }}>{o.title}</div>

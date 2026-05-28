@@ -8,7 +8,7 @@ export function Partnerships({ isActive }: { isActive: boolean }) {
       tag="09 — Parcerias"
       num="09"
       isActive={isActive}
-      ambColor="rgba(137,170,204,.13)"
+      ambColor="rgba(232,201,106,.13)"
       ambPos="bottom:10%;left:20%"
     >
       {/* Heading */}
@@ -61,9 +61,9 @@ export function Partnerships({ isActive }: { isActive: boolean }) {
                   className="uppercase tracking-[.1em] px-3 py-[5px] rounded-full"
                   style={{
                     fontSize: 10,
-                    background: 'rgba(137,170,204,.08)',
-                    color: 'rgba(137,170,204,.75)',
-                    border: '1px solid rgba(137,170,204,.14)',
+                    background: 'rgba(232,201,106,.08)',
+                    color: 'rgba(232,201,106,.75)',
+                    border: '1px solid rgba(232,201,106,.14)',
                   }}
                 >
                   {tag}

@@ -7,7 +7,7 @@ function Monogram() {
         width: 28,
         height: 28,
         borderRadius: '50%',
-        background: 'linear-gradient(135deg, #89AACC, #4E85BF)',
+        background: 'linear-gradient(135deg, #E8C96A, #C9A84C)',
         padding: 1.5,
         flexShrink: 0,
       }}

@@ -86,8 +86,8 @@ export function Loader({ onComplete }: Props) {
               className="h-full transition-all duration-[40ms]"
               style={{
                 width: `${count}%`,
-                background: 'linear-gradient(90deg,#89AACC,#4E85BF)',
-                boxShadow: '0 0 10px rgba(137,170,204,.5)',
+                background: 'linear-gradient(90deg,#E8C96A,#C9A84C)',
+                boxShadow: '0 0 10px rgba(232,201,106,.5)',
               }}
             />
           </div>
@@ -116,7 +116,7 @@ export function Monogram({ size = 32 }: { size?: number }) {
         width: size,
         height: size,
         borderRadius: '50%',
-        background: 'linear-gradient(135deg,#89AACC,#4E85BF)',
+        background: 'linear-gradient(135deg,#E8C96A,#C9A84C)',
         padding: 1.5,
         flexShrink: 0,
       }}

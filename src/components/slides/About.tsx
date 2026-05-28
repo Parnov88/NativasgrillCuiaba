@@ -8,7 +8,7 @@ export function About({ isActive }: { isActive: boolean }) {
       tag="02 — Identidade"
       num="02"
       isActive={isActive}
-      ambColor="rgba(137,170,204,.12)"
+      ambColor="rgba(232,201,106,.12)"
       ambPos="top:10%;left:-5%"
     >
       {/* Heading */}
@@ -44,7 +44,7 @@ export function About({ isActive }: { isActive: boolean }) {
                   className="font-display italic leading-[1]"
                   style={{
                     fontSize: 'clamp(1.8rem,3vw,2.6rem)',
-                    background: 'linear-gradient(90deg,#89AACC,#4E85BF)',
+                    background: 'linear-gradient(90deg,#E8C96A,#C9A84C)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -87,7 +87,7 @@ export function About({ isActive }: { isActive: boolean }) {
                   className="w-[10px] h-[10px] rounded-full mt-[5px]"
                   style={
                     i === TIMELINE.length - 1
-                      ? { background: 'linear-gradient(135deg,#89AACC,#4E85BF)' }
+                      ? { background: 'linear-gradient(135deg,#E8C96A,#C9A84C)' }
                       : { background: 'transparent', border: '1px solid rgba(255,255,255,.2)' }
                   }
                 />
@@ -98,7 +98,7 @@ export function About({ isActive }: { isActive: boolean }) {
                   {t.pill && (
                     <span
                       className="tracking-[.08em] uppercase px-2 py-[2px] rounded-full"
-                      style={{ fontSize: 9, background: 'rgba(137,170,204,.1)', color: 'rgba(137,170,204,.7)' }}
+                      style={{ fontSize: 9, background: 'rgba(232,201,106,.1)', color: 'rgba(232,201,106,.7)' }}
                     >
                       {t.pill}
                     </span>

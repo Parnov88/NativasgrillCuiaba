@@ -21,11 +21,11 @@ const item = {
 }
 
 export function SlideShell({
-  tag,
-  num,
+  tag: _tag,
+  num: _num,
   children,
   isActive,
-  ambColor = 'rgba(78,133,191,.18)',
+  ambColor = 'rgba(201,168,76,.18)',
   ambPos = 'top:5%;right:-8%',
 }: Props) {
   return (
@@ -50,13 +50,6 @@ export function SlideShell({
           ...parsePosStyle(ambPos),
         }}
       />
-      {/* ghost number */}
-      <div
-        className="absolute bottom-[-28px] right-5 z-0 font-display italic text-white/[.025] leading-none select-none pointer-events-none"
-        style={{ fontSize: 'clamp(7rem,20vw,20rem)', letterSpacing: '-.05em' }}
-      >
-        {num}
-      </div>
       {/* inner content */}
       <motion.div
         className="flex-1 flex flex-col px-8 md:px-14 pt-16 pb-12 relative z-[2] w-full"

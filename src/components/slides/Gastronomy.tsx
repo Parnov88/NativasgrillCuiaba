@@ -8,7 +8,7 @@ export function Gastronomy({ isActive }: { isActive: boolean }) {
       tag="05 — Gastronomia"
       num="05"
       isActive={isActive}
-      ambColor="rgba(137,170,204,.1)"
+      ambColor="rgba(232,201,106,.1)"
       ambPos="top:20%;left:30%"
     >
       {/* Heading */}
@@ -52,7 +52,7 @@ export function Gastronomy({ isActive }: { isActive: boolean }) {
                     width: 4,
                     height: 4,
                     borderRadius: '50%',
-                    background: 'rgba(137,170,204,.4)',
+                    background: 'rgba(232,201,106,.4)',
                     flexShrink: 0,
                     display: 'inline-block',
                   }}

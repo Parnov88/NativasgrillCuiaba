@@ -81,7 +81,7 @@ export function Pricing({ isActive }: { isActive: boolean }) {
             style={{
               scrollSnapAlign: 'start',
               border: c.featured
-                ? '1px solid rgba(137,170,204,.2)'
+                ? '1px solid rgba(232,201,106,.2)'
                 : '1px solid rgba(255,255,255,.06)',
               minHeight: 320,
             }}
@@ -104,7 +104,7 @@ export function Pricing({ isActive }: { isActive: boolean }) {
             {c.featured && (
               <div
                 className="absolute top-[10px] left-[10px] z-[2] text-[7px] tracking-[.18em] font-semibold uppercase px-[9px] py-[4px] rounded-full text-white"
-                style={{ background: 'linear-gradient(90deg,rgba(137,170,204,.55),rgba(78,133,191,.55))', backdropFilter: 'blur(6px)' }}
+                style={{ background: 'linear-gradient(90deg,rgba(232,201,106,.55),rgba(201,168,76,.55))', backdropFilter: 'blur(6px)' }}
               >
                 Mais pedido
               </div>
@@ -135,7 +135,7 @@ export function Pricing({ isActive }: { isActive: boolean }) {
                       className="font-display italic leading-[1]"
                       style={{
                         fontSize: 'clamp(1.4rem,2.5vw,1.75rem)',
-                        background: 'linear-gradient(90deg,#89AACC,#c8ddee)',
+                        background: 'linear-gradient(90deg,#E8C96A,#f0d98a)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
@@ -166,12 +166,12 @@ export function Pricing({ isActive }: { isActive: boolean }) {
         className="flex items-start gap-[8px] mt-[12px] text-[.68rem] text-white/30 leading-[1.85]"
         style={{ paddingTop: 10, borderTop: '1px solid rgba(255,255,255,.05)' }}
       >
-        <span style={{ color: 'rgba(137,170,204,.5)', flexShrink: 0, fontSize: 10 }}>✦</span>
+        <span style={{ color: 'rgba(232,201,106,.5)', flexShrink: 0, fontSize: 10 }}>✦</span>
         <span>
           Abertura mínima de{' '}
-          <strong style={{ color: 'rgba(137,170,204,.75)' }}>50 pessoas</strong>
+          <strong style={{ color: 'rgba(232,201,106,.75)' }}>50 pessoas</strong>
           {' '}· Exclusividade a partir de{' '}
-          <strong style={{ color: 'rgba(137,170,204,.75)' }}>120 convidados</strong>
+          <strong style={{ color: 'rgba(232,201,106,.75)' }}>120 convidados</strong>
           {' '}· Rodízio + buffet gourmet inclusos · Projetor HD sem custo adicional
         </span>
       </motion.div>

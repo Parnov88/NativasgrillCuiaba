@@ -11,8 +11,8 @@
   --foreground: #ffffff;
   --muted: rgba(255,255,255,0.53);
   --stroke: rgba(255,255,255,0.09);
-  --accent-a: #89AACC;
-  --accent-b: #4E85BF;
+  --accent-a: #E8C96A;
+  --accent-b: #C9A84C;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -98,7 +98,7 @@ body {
   background-clip: text;
 }
 .grad-text-blue {
-  background: linear-gradient(90deg, #89AACC, #4E85BF);
+  background: linear-gradient(90deg, #E8C96A, #C9A84C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -149,7 +149,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #89AACC, #4E85BF);
+  background: linear-gradient(to bottom, #E8C96A, #C9A84C);
   animation: ssh-scroll 1.5s ease-in-out infinite;
 }
 @keyframes bounce-down {

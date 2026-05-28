@@ -21,7 +21,7 @@ export function SobreNos({ isActive }: { isActive: boolean }) {
       tag="03 — Sobre Nós"
       num="03"
       isActive={isActive}
-      ambColor="rgba(137,170,204,.1)"
+      ambColor="rgba(232,201,106,.1)"
       ambPos="top:15%;right:0%"
     >
       {/* Heading */}
@@ -86,7 +86,7 @@ export function SobreNos({ isActive }: { isActive: boolean }) {
                 <div
                   className="font-display italic text-[2rem] leading-[1]"
                   style={{
-                    background: 'linear-gradient(90deg,#89AACC,#4E85BF)',
+                    background: 'linear-gradient(90deg,#E8C96A,#C9A84C)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',

@@ -8,7 +8,7 @@ export function Space({ isActive }: { isActive: boolean }) {
       tag="04 — Espaço"
       num="04"
       isActive={isActive}
-      ambColor="rgba(78,133,191,.12)"
+      ambColor="rgba(201,168,76,.12)"
       ambPos="bottom:10%;right:-5%"
     >
       {/* Heading */}
@@ -54,7 +54,7 @@ export function Space({ isActive }: { isActive: boolean }) {
               {/* Accent dot */}
               <div
                 className="w-[5px] h-[5px] rounded-full mb-1 transition-opacity duration-300 opacity-50 group-hover:opacity-100"
-                style={{ background: 'linear-gradient(135deg,#89AACC,#4E85BF)' }}
+                style={{ background: 'linear-gradient(135deg,#E8C96A,#C9A84C)' }}
               />
               <div
                 className="font-medium text-white/80 leading-snug tracking-[0.01em] transition-colors duration-300 group-hover:text-white/95"
@@ -106,7 +106,7 @@ export function Space({ isActive }: { isActive: boolean }) {
                         className="font-display italic leading-none"
                         style={{
                           fontSize: 28,
-                          background: 'linear-gradient(90deg,#89AACC,#c8ddee)',
+                          background: 'linear-gradient(90deg,#E8C96A,#f0d98a)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
                           backgroundClip: 'text',
@@ -163,7 +163,7 @@ export function Space({ isActive }: { isActive: boolean }) {
                       className="font-medium text-right flex-shrink-0"
                       style={{
                         fontSize: 12.5,
-                        color: row.highlight ? 'rgba(137,170,204,.9)' : 'rgba(255,255,255,.6)',
+                        color: row.highlight ? 'rgba(232,201,106,.9)' : 'rgba(255,255,255,.6)',
                         fontVariantNumeric: 'tabular-nums',
                       }}
                     >

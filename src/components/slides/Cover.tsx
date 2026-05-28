@@ -33,12 +33,12 @@ export function Cover() {
         }}
       />
       {/* ambient glows */}
-      <div className="amb" style={{ width: 600, height: 600, top: '20%', right: '-10%', background: 'radial-gradient(circle,rgba(78,133,191,.18) 0%,transparent 70%)', opacity: 0.7 }} />
+      <div className="amb" style={{ width: 600, height: 600, top: '20%', right: '-10%', background: 'radial-gradient(circle,rgba(201,168,76,.18) 0%,transparent 70%)', opacity: 0.7 }} />
       <div className="amb" style={{ width: 400, height: 400, bottom: '10%', left: '5%',  background: 'radial-gradient(circle,rgba(255,255,255,.04) 0%,transparent 70%)', opacity: 0.5 }} />
       {/* left bar */}
       <div
         className="absolute left-0 top-0 bottom-0 z-[3]"
-        style={{ width: 3, background: 'linear-gradient(180deg,transparent,rgba(137,170,204,.6),rgba(78,133,191,.4),transparent)' }}
+        style={{ width: 3, background: 'linear-gradient(180deg,transparent,rgba(232,201,106,.6),rgba(201,168,76,.4),transparent)' }}
       />
       {/* ghost number */}
       <div
@@ -71,7 +71,7 @@ export function Cover() {
             style={{ fontSize: 11 }}
           >
             Cuiabá — Mato Grosso · Brasil
-            <span style={{ flex: '0 0 36px', height: 1, background: 'linear-gradient(90deg,rgba(137,170,204,.5),transparent)' }} />
+            <span style={{ flex: '0 0 36px', height: 1, background: 'linear-gradient(90deg,rgba(232,201,106,.5),transparent)' }} />
           </motion.p>
           <motion.h1
             variants={fade}
@@ -143,7 +143,7 @@ export function Cover() {
             <div className="liquid-glass rounded-full flex items-center gap-[8px] px-[18px] py-[9px] uppercase text-white/50 tracking-[.25em]" style={{ fontSize: 10 }}>
               <span
                 className="animate-pulse"
-                style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(137,170,204,.8)', flexShrink: 0, display: 'inline-block' }}
+                style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(232,201,106,.8)', flexShrink: 0, display: 'inline-block' }}
               />
               Disponível para parcerias
             </div>
@@ -165,7 +165,7 @@ export function Cover() {
         >
           <path
             d="M7 10.5L14 17.5L21 10.5"
-            stroke="rgba(137,170,204,0.7)"
+            stroke="rgba(232,201,106,0.7)"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -123,7 +123,7 @@ export function Hero() {
                 <button
                   type="submit"
                   className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white"
-                  style={{ background: 'linear-gradient(135deg, #89AACC, #4E85BF)' }}
+                  style={{ background: 'linear-gradient(135deg, #E8C96A, #C9A84C)' }}
                 >
                   {submitted ? (
                     <Check size={14} strokeWidth={2} />
