@@ -135,7 +135,6 @@ export function Contact({ isActive }: { isActive: boolean }) {
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 z-[1]">
             <div style={{ height: '0.5px', background: 'rgba(255,255,255,.15)', marginBottom: 12 }} />
             <p className="caption text-white/55">Gastronomia premium · Espaço privativo</p>
-            <p className="eyebrow text-white/28 mt-2">Cuiabá — Mato Grosso · 2026</p>
           </div>
         </div>
 
