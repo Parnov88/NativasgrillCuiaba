@@ -5,140 +5,105 @@ import { waLink } from '../lib/utils'
 const MAPS_URL =
   'https://www.google.com/maps/search/?api=1&query=Av.+Miguel+Sutil,+6741+Duque+de+Caxias+Cuiab%C3%A1+MT'
 
-const fade = {
-  hidden: { opacity: 0, y: 18 },
+const WA_MSG = 'Olá! Gostaria de solicitar uma proposta para meu evento na Nativas Grill Cuiabá.'
+
+const col = {
+  hidden: { opacity: 0, y: 20 },
   show: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 },
+    opacity: 1, y: 0,
+    transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: i * 0.07 },
   }),
 }
 
 export function Footer({ isActive }: { isActive: boolean }) {
   return (
-    <footer
-      className="slide flex-col"
-      style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,.06)' }}
-    >
+    <footer className="slide flex-col" style={{ background: '#000' }}>
+
+      {/* Thin top accent line */}
+      <div style={{ height: 1, background: 'linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent)', flexShrink: 0 }} />
+
       {/* Ambient */}
-      <div
-        className="amb"
-        style={{
-          width: 500,
-          height: 500,
-          bottom: '-10%',
-          left: '-5%',
-          background: 'radial-gradient(circle,rgba(78,133,191,.09) 0%,transparent 70%)',
-        }}
-      />
+      <div className="amb" style={{ width: 500, height: 500, bottom: '-15%', left: '-5%', background: 'radial-gradient(circle,rgba(78,133,191,.07) 0%,transparent 70%)' }} />
 
-      {/* Inner */}
-      <div className="relative z-[2] flex flex-col h-full px-8 md:px-14 pt-16 pb-10">
+      <div className="relative z-[2] flex flex-col h-full px-8 md:px-14 py-12">
 
-        {/* Eyebrow */}
-        <motion.p
-          className="eyebrow mb-12"
-          custom={0}
-          variants={fade}
-          initial="hidden"
-          animate={isActive ? 'show' : 'hidden'}
+        {/* ── TOP: eyebrow ── */}
+        <motion.div
+          custom={0} variants={col} initial="hidden" animate={isActive ? 'show' : 'hidden'}
+          className="flex items-center justify-between mb-10"
         >
-          <span style={{ display: 'inline-block', width: 20, height: 1, background: 'rgba(255,255,255,.2)', verticalAlign: 'middle', marginRight: 12 }} />
-          Nativas Grill · Cuiabá · 2026
-        </motion.p>
+          <p className="eyebrow text-white/20">Nativas Grill · Cuiabá · 2026</p>
+          <div style={{ width: 40, height: 1, background: 'rgba(255,255,255,.1)' }} />
+        </motion.div>
 
-        {/* 4-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 flex-1">
+        {/* ── MAIN GRID ── */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 flex-1">
 
           {/* Col 1 — Branding */}
-          <motion.div
-            custom={1}
-            variants={fade}
-            initial="hidden"
-            animate={isActive ? 'show' : 'hidden'}
-            className="flex flex-col gap-5"
+          <motion.div custom={1} variants={col} initial="hidden" animate={isActive ? 'show' : 'hidden'}
+            className="flex flex-col justify-between"
           >
             <div>
               <div
-                className="font-display tracking-widest uppercase text-white"
-                style={{ fontSize: 'var(--ts-4)', lineHeight: 1.1 }}
+                className="font-display leading-[1]"
+                style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', letterSpacing: '-0.01em' }}
               >
-                Nativas<br />Grill
+                <span className="text-white block">Nativas</span>
+                <span className="italic" style={{ color: '#C9A84C' }}>Grill</span>
               </div>
-              <div className="text-white/20 tracking-widest uppercase mt-1" style={{ fontSize: 'var(--ts-0)' }}>
-                Cuiabá
-              </div>
+              <div className="eyebrow text-white/20 mt-2">Cuiabá — MT</div>
             </div>
 
-            <p className="text-white/40 font-light leading-[1.8]" style={{ fontSize: 'var(--ts-2)' }}>
-              Gastronomia premium no<br />
-              Centro-Oeste desde 2006.<br />
-              Tradição, excelência e<br />
-              memórias à mesa.
-            </p>
-
-            <a
-              href="https://instagram.com/nativasgrillcuiaba"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white/30 hover:text-white/70 transition-colors duration-300 w-fit"
-              style={{ fontSize: 'var(--ts-1)' }}
-            >
-              <Instagram size={13} strokeWidth={1.5} />
-              @nativasgrillcuiaba
-            </a>
+            <div className="flex flex-col gap-3 mt-6">
+              <p className="text-white/35 font-light leading-[1.75]" style={{ fontSize: 13 }}>
+                Gastronomia premium no Centro-Oeste desde 2006. Tradição, excelência e memórias à mesa.
+              </p>
+              <a
+                href="https://instagram.com/nativasgrillcuiaba"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white/30 hover:text-white/60 transition-colors duration-300 w-fit mt-1"
+                style={{ fontSize: 12 }}
+              >
+                <Instagram size={12} strokeWidth={1.5} />
+                @nativasgrillcuiaba
+              </a>
+            </div>
           </motion.div>
 
           {/* Col 2 — Horários */}
-          <motion.div
-            custom={2}
-            variants={fade}
-            initial="hidden"
-            animate={isActive ? 'show' : 'hidden'}
+          <motion.div custom={2} variants={col} initial="hidden" animate={isActive ? 'show' : 'hidden'}
             className="flex flex-col gap-5"
           >
-            <div className="eyebrow" style={{ borderBottom: '1px solid rgba(255,255,255,.06)', paddingBottom: 12 }}>
+            <div className="eyebrow text-white/25 pb-3" style={{ borderBottom: '0.5px solid rgba(255,255,255,.07)' }}>
               Horários
             </div>
 
             <div className="flex flex-col gap-4">
               <div>
-                <div className="text-white/55 font-medium uppercase tracking-[.15em] mb-2" style={{ fontSize: 'var(--ts-0)' }}>
-                  Almoço
+                <div className="uppercase tracking-[.15em] text-white/40 mb-2" style={{ fontSize: 10 }}>Almoço</div>
+                <div className="text-white/30 leading-[1.8] font-light" style={{ fontSize: 13 }}>
+                  Seg – Sáb<br /><span className="text-white/55">11h00 – 15h30</span>
                 </div>
-                <div className="text-white/35 font-light leading-[1.9]" style={{ fontSize: 'var(--ts-1)' }}>
-                  Seg – Sáb<br />
-                  <span className="text-white/55">11h00 – 15h30</span>
-                </div>
-                <div className="text-white/35 font-light leading-[1.9] mt-2" style={{ fontSize: 'var(--ts-1)' }}>
-                  Domingos<br />
-                  <span className="text-white/55">11h00 – 16h00</span>
+                <div className="text-white/30 leading-[1.8] font-light mt-2" style={{ fontSize: 13 }}>
+                  Domingos<br /><span className="text-white/55">11h00 – 16h00</span>
                 </div>
               </div>
-
-              <div style={{ height: '1px', background: 'rgba(255,255,255,.05)' }} />
-
+              <div style={{ height: '0.5px', background: 'rgba(255,255,255,.06)' }} />
               <div>
-                <div className="text-white/55 font-medium uppercase tracking-[.15em] mb-2" style={{ fontSize: 'var(--ts-0)' }}>
-                  Jantar
-                </div>
-                <div className="text-white/35 font-light leading-[1.9]" style={{ fontSize: 'var(--ts-1)' }}>
-                  Seg – Sáb<br />
-                  <span className="text-white/55">18h30 – 23h30</span>
+                <div className="uppercase tracking-[.15em] text-white/40 mb-2" style={{ fontSize: 10 }}>Jantar</div>
+                <div className="text-white/30 leading-[1.8] font-light" style={{ fontSize: 13 }}>
+                  Seg – Sáb<br /><span className="text-white/55">18h30 – 23h30</span>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Col 3 — Localização & Contato */}
-          <motion.div
-            custom={3}
-            variants={fade}
-            initial="hidden"
-            animate={isActive ? 'show' : 'hidden'}
+          {/* Col 3 — Localização */}
+          <motion.div custom={3} variants={col} initial="hidden" animate={isActive ? 'show' : 'hidden'}
             className="flex flex-col gap-5"
           >
-            <div className="eyebrow" style={{ borderBottom: '1px solid rgba(255,255,255,.06)', paddingBottom: 12 }}>
+            <div className="eyebrow text-white/25 pb-3" style={{ borderBottom: '0.5px solid rgba(255,255,255,.07)' }}>
               Localização &amp; Contato
             </div>
 
@@ -147,15 +112,14 @@ export function Footer({ isActive }: { isActive: boolean }) {
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 text-white/35 hover:text-white/65 transition-colors duration-300 group"
+                className="flex items-start gap-3 text-white/35 hover:text-white/60 transition-colors duration-300 group"
               >
-                <MapPin size={13} strokeWidth={1.5} className="mt-[3px] flex-shrink-0 text-white/25 group-hover:text-white/55 transition-colors duration-300" />
-                <span className="font-light leading-[1.85]" style={{ fontSize: 'var(--ts-1)' }}>
+                <MapPin size={12} strokeWidth={1.5} className="mt-[3px] flex-shrink-0 text-white/20" />
+                <span className="font-light leading-[1.85]" style={{ fontSize: 13 }}>
                   Av. Miguel Sutil, 6741<br />
                   Duque de Caxias<br />
-                  Cuiabá – MT<br />
-                  CEP 78043-000
-                  <span className="block text-white/20 mt-1 uppercase tracking-[.12em]" style={{ fontSize: 'var(--ts-0)' }}>
+                  Cuiabá – MT · 78043-000
+                  <span className="block text-white/20 mt-1 uppercase tracking-[.12em]" style={{ fontSize: 10 }}>
                     Ver no Google Maps ↗
                   </span>
                 </span>
@@ -163,108 +127,84 @@ export function Footer({ isActive }: { isActive: boolean }) {
 
               <a
                 href="tel:+556536214642"
-                className="flex items-center gap-3 text-white/35 hover:text-white/65 transition-colors duration-300"
+                className="flex items-center gap-3 text-white/35 hover:text-white/60 transition-colors duration-300"
+                style={{ fontSize: 13 }}
               >
-                <Phone size={13} strokeWidth={1.5} className="flex-shrink-0 text-white/25" />
-                <span style={{ fontSize: 'var(--ts-1)' }}>(65) 3621-4642</span>
+                <Phone size={12} strokeWidth={1.5} className="flex-shrink-0 text-white/20" />
+                (65) 3621-4642
               </a>
             </address>
           </motion.div>
 
-          {/* Col 4 — CTA Reserva */}
-          <motion.div
-            custom={4}
-            variants={fade}
-            initial="hidden"
-            animate={isActive ? 'show' : 'hidden'}
-            className="flex flex-col gap-6 justify-between"
+          {/* Col 4 — CTA */}
+          <motion.div custom={4} variants={col} initial="hidden" animate={isActive ? 'show' : 'hidden'}
+            className="flex flex-col gap-5"
           >
-            <div className="eyebrow" style={{ borderBottom: '1px solid rgba(255,255,255,.06)', paddingBottom: 12 }}>
+            <div className="eyebrow text-white/25 pb-3" style={{ borderBottom: '0.5px solid rgba(255,255,255,.07)' }}>
               Reservas
             </div>
 
-            <div className="flex flex-col gap-4">
-              <p className="text-white/35 font-light leading-[1.8]" style={{ fontSize: 'var(--ts-1)' }}>
-                Agende seu evento com a nossa equipe e receba uma proposta personalizada.
-              </p>
+            <p className="text-white/30 font-light leading-[1.75]" style={{ fontSize: 13 }}>
+              Agende seu evento e receba uma proposta personalizada.
+            </p>
 
+            <div className="flex flex-col gap-3">
               <a
-                href={waLink('Olá! Gostaria de solicitar uma proposta para meu evento na Nativas Grill Cuiabá.')}
+                href={waLink(WA_MSG)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 px-6 text-white
-                           border border-white/15 hover:border-white/60 hover:bg-white/[.03]
-                           transition-all duration-300 rounded-none font-sans font-medium
-                           uppercase tracking-widest"
-                style={{ fontSize: 'var(--ts-0)' }}
+                className="flex items-center justify-center gap-2 py-3 px-5 text-white
+                           border border-white/15 hover:border-white/50 hover:bg-white/[.03]
+                           transition-all duration-300 font-medium uppercase tracking-widest"
+                style={{ fontSize: 10 }}
               >
-                <MessageCircle size={12} strokeWidth={1.5} />
+                <MessageCircle size={11} strokeWidth={1.5} />
                 Reservar Espaço
               </a>
-
               <a
-                href={waLink('Olá! Gostaria de solicitar uma proposta para meu evento na Nativas Grill Cuiabá.')}
+                href={waLink(WA_MSG)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 px-6
-                           transition-all duration-300 font-sans font-medium
-                           uppercase tracking-widest text-white/30 hover:text-white/60"
+                className="flex items-center justify-center gap-2 py-3 px-5
+                           transition-all duration-300 font-medium uppercase tracking-widest
+                           text-white/30 hover:text-white/60"
                 style={{
-                  fontSize: 'var(--ts-0)',
-                  background: 'linear-gradient(135deg,rgba(201,168,76,.12),rgba(232,201,106,.08))',
-                  border: '1px solid rgba(201,168,76,.2)',
+                  fontSize: 10,
+                  background: 'rgba(201,168,76,.06)',
+                  border: '1px solid rgba(201,168,76,.18)',
                 }}
               >
-                <MessageCircle size={12} strokeWidth={1.5} />
+                <MessageCircle size={11} strokeWidth={1.5} />
                 WhatsApp Direto
               </a>
             </div>
 
-            {/* Decorative serif quote */}
-            <p
-              className="font-display italic text-white/15 leading-[1.5] mt-auto"
-              style={{ fontSize: 'var(--ts-3)' }}
-            >
+            {/* Quote */}
+            <p className="font-display italic text-white/12 leading-[1.4] mt-auto" style={{ fontSize: 'clamp(1.2rem,2vw,1.6rem)' }}>
               "Da grelha<br />à memória."
             </p>
           </motion.div>
         </div>
 
-        {/* Bottom bar — legal */}
+        {/* ── BOTTOM BAR ── */}
         <motion.div
-          custom={5}
-          variants={fade}
-          initial="hidden"
-          animate={isActive ? 'show' : 'hidden'}
-          className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 mt-10 pt-6"
-          style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}
+          custom={5} variants={col} initial="hidden" animate={isActive ? 'show' : 'hidden'}
+          className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 mt-8 pt-5"
+          style={{ borderTop: '0.5px solid rgba(255,255,255,.06)' }}
         >
-          <p style={{ fontSize: 'var(--ts-0)', color: 'rgba(255,255,255,.22)' }}>
-            © {new Date().getFullYear()} Nativas Grill Cuiabá. Todos os direitos reservados.
+          <p style={{ fontSize: 10, color: 'rgba(255,255,255,.2)' }}>
+            © {new Date().getFullYear()} Nativas Grill Cuiabá · Todos os direitos reservados.
           </p>
-
-          <div className="flex items-center gap-6">
-            {['Política de Privacidade', 'Termos de Uso'].map(label => (
-              <a
-                key={label}
-                href="#"
-                className="transition-colors duration-200 hover:text-white/60"
-                style={{ fontSize: 'var(--ts-0)', color: 'rgba(255,255,255,.22)' }}
-              >
-                {label}
-              </a>
+          <div className="flex items-center gap-5">
+            {['Política de Privacidade', 'Termos de Uso', 'Instagram'].map(l => (
+              <a key={l} href="#"
+                className="transition-colors duration-200 hover:text-white/50"
+                style={{ fontSize: 10, color: 'rgba(255,255,255,.2)' }}
+              >{l}</a>
             ))}
-            <a
-              href="https://instagram.com/nativasgrillcuiaba"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors duration-200 hover:text-white/60"
-              style={{ fontSize: 'var(--ts-0)', color: 'rgba(255,255,255,.22)' }}
-            >
-              Instagram
-            </a>
           </div>
         </motion.div>
+
       </div>
     </footer>
   )
