@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { SlideShell, slideItem } from './_SlideShell'
-import { CUTS, BUFFET_ITEMS } from '../../data/pricing'
+import { BUFFET_ITEMS } from '../../data/pricing'
 
 export function Gastronomy({ isActive }: { isActive: boolean }) {
   return (
