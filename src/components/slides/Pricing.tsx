@@ -90,7 +90,8 @@ export function Pricing({ isActive }: { isActive: boolean }) {
             <img
               src={COMBO_IMGS[i]}
               alt={c.name}
-              className="absolute inset-0 w-full h-full object-cover scale-[1.22] opacity-70 group-hover:opacity-85 transition-opacity duration-500"
+              className="absolute inset-0 w-full h-full object-cover scale-[1.04] opacity-70 group-hover:opacity-85 transition-opacity duration-500"
+              style={{ objectPosition: '35% center' }}
             />
 
             {/* Gradient overlay — strong at bottom, fades up */}

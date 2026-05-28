@@ -17,7 +17,7 @@ import { Partnerships } from './components/slides/Partnerships'
 import { Contact } from './components/slides/Contact'
 import { Footer } from './components/Footer'
 
-const SLIDE_COUNT = 11
+const SLIDE_COUNT = 10
 
 function Deck() {
   const { deckRef, current, goTo } = useDeck(SLIDE_COUNT)
@@ -37,7 +37,7 @@ function Deck() {
         <Audience isActive={current === 7} />
         <Partnerships isActive={current === 8} />
         <Contact isActive={current === 9} />
-        <Footer isActive={current === 10} />
+        <Footer />
       </div>
     </>
   )
