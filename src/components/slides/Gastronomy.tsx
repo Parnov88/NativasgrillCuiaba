@@ -30,36 +30,6 @@ export function Gastronomy({ isActive }: { isActive: boolean }) {
         </h2>
       </motion.div>
 
-      {/* Cuts marquee */}
-      <motion.div variants={slideItem} className="overflow-hidden mb-4">
-        <div
-          className="overflow-hidden py-3"
-          style={{ borderTop: '1px solid rgba(255,255,255,.05)', borderBottom: '1px solid rgba(255,255,255,.05)' }}
-        >
-          <div className="mq-track flex items-center">
-            {[...CUTS, ...CUTS].map((cut, i) => (
-              <span
-                key={i}
-                className="flex items-center gap-5 flex-shrink-0 px-5"
-                style={{ fontSize: 13, color: 'rgba(255,255,255,.5)', letterSpacing: '0.04em' }}
-              >
-                {cut}
-                <span
-                  style={{
-                    width: 4,
-                    height: 4,
-                    borderRadius: '50%',
-                    background: 'rgba(232,201,106,.4)',
-                    flexShrink: 0,
-                    display: 'inline-block',
-                  }}
-                />
-              </span>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
       {/* Buffet section */}
       <motion.div variants={slideItem} className="flex-1 flex flex-col min-h-0">
         <div className="uppercase text-white/25 mb-3 tracking-[.4em]" style={{ fontSize: 10 }}>
