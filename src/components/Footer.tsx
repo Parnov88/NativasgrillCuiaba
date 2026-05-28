@@ -14,10 +14,7 @@ export function Footer() {
         <div style={{ height: '0.5px', background: 'rgba(255,255,255,.08)' }} />
 
         {/* 4-column grid */}
-        <div
-          className="grid grid-cols-2 md:grid-cols-4 items-start"
-          style={{ gap: '2rem 3rem', padding: '2.5rem 4rem' }}
-        >
+        <div className="grid grid-cols-2 md:grid-cols-4 items-start gap-x-4 gap-y-5 md:gap-x-10 md:gap-y-6 px-6 pt-6 pb-4 md:px-16 md:pt-8 md:pb-6">
           {/* Brand */}
           <div className="flex flex-col gap-2">
             <div
@@ -88,11 +85,8 @@ export function Footer() {
 
         {/* copyright */}
         <div
-          className="flex flex-col md:flex-row items-start md:items-center justify-between gap-1"
-          style={{
-            borderTop: '0.5px solid rgba(255,255,255,.05)',
-            padding: '0.75rem 4rem',
-          }}
+          className="flex flex-col md:flex-row items-start md:items-center justify-between gap-1 px-6 py-3 md:px-16"
+          style={{ borderTop: '0.5px solid rgba(255,255,255,.05)' }}
         >
           <p style={{ fontSize: 10, color: 'rgba(255,255,255,.18)' }}>
             © {new Date().getFullYear()} Nativas Grill Cuiabá · Todos os direitos reservados.

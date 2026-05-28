@@ -49,8 +49,7 @@ export function Cover() {
       </div>
 
       <motion.div
-        className="relative z-[2] flex-1 flex flex-col justify-between"
-        style={{ padding: '32px 56px 40px 56px' }}
+        className="relative z-[2] flex-1 flex flex-col justify-between px-6 pt-8 pb-6 md:px-14 md:pt-8 md:pb-10"
         initial="hidden"
         animate="show"
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
@@ -76,7 +75,7 @@ export function Cover() {
           <motion.h1
             variants={fade}
             className="font-display italic leading-[.88] tracking-[-0.04em]"
-            style={{ fontSize: 'clamp(5rem,12vw,11rem)' }}
+            style={{ fontSize: 'clamp(3.8rem,12vw,11rem)' }}
           >
             <span
               style={{
@@ -121,7 +120,7 @@ export function Cover() {
 
         {/* Bottom */}
         <motion.div variants={fade} className="flex items-end justify-between flex-wrap gap-4">
-          <div className="text-white/30 font-light leading-[1.9]" style={{ fontSize: 12 }}>
+          <div className="hidden md:block text-white/30 font-light leading-[1.9]" style={{ fontSize: 12 }}>
             <strong className="block uppercase text-white/20 font-normal mb-1 tracking-[.35em]" style={{ fontSize: 10 }}>
               Localização
             </strong>
@@ -140,7 +139,7 @@ export function Cover() {
               <MessageCircle size={14} strokeWidth={2} />
               Reservar Espaço
             </a>
-            <div className="liquid-glass rounded-full flex items-center gap-[8px] px-[18px] py-[9px] uppercase text-white/50 tracking-[.25em]" style={{ fontSize: 10 }}>
+            <div className="hidden md:flex liquid-glass rounded-full items-center gap-[8px] px-[18px] py-[9px] uppercase text-white/50 tracking-[.25em]" style={{ fontSize: 10 }}>
               <span
                 className="animate-pulse"
                 style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(232,201,106,.8)', flexShrink: 0, display: 'inline-block' }}
@@ -152,7 +151,7 @@ export function Cover() {
       </motion.div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-[3]">
+      <div className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 z-[3]">
         <span className="uppercase tracking-[.4em]" style={{ fontSize: 10, color: 'rgba(255,255,255,.3)' }}>
           Avançar
         </span>
