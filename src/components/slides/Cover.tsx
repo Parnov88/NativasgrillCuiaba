@@ -93,10 +93,8 @@ export function Cover() {
             <span
               style={{
                 display: 'block',
-                background: 'linear-gradient(180deg,#E8C96A 0%,#C9A84C 60%,#a8883a 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                WebkitTextFillColor: '#C9A84C',
+                color: '#C9A84C',
               }}
             >
               Grill
